@@ -67,6 +67,16 @@ gulp.task('deploy', ['sass', 'nunjucks', 'js', 'img'], shell.task([
   ])
 );
 
+// Claudio's Design Task
+gulp.task('design', ['browserSync', 'sass', 'nunjucks', 'js', 'img'], function (){
+  gulp.watch('source/sass/**/*.scss', ['sass']);
+  gulp.watch('source/templates/**/*.html', ['nunjucks']);
+  gulp.watch('source/img/**/*', ['img']);
+  gulp.watch('source/js/**/*', ['js']);
+});
+
+
+// Default Task for generating the site
 gulp.task('default', ['browserSync', 'sass', 'nunjucks', 'js', 'img'], function (){
   gulp.watch('source/sass/**/*.scss', ['sass']);
   gulp.watch('source/templates/**/*.html', ['nunjucks']);
