@@ -6925,13 +6925,13 @@ code.m-negative {
   padding: 50px 0;
   color: white; }
   .b-main-categories .e-item.m-clinics {
-    background-color: #C2C33B; }
+    background-color: #c2c33b; }
   .b-main-categories .e-item.m-coaching {
     background-color: #008895; }
   .b-main-categories .e-item.m-masters {
     background-color: #008ab3; }
   .b-main-categories .e-item.m-workshop {
-    background-color: #AD0054; }
+    background-color: #ad0054; }
 
 .b-upcoming-courses .e-item {
   padding: 50px;
@@ -6941,10 +6941,39 @@ code.m-negative {
   .b-upcoming-courses .e-item:nth-of-type(odd) {
     background-color: rgba(51, 51, 51, 0.05); }
   .b-upcoming-courses .e-item.m-clinics .b-button, .b-upcoming-courses .e-item.m-clinics .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-clinics input[type="submit"] {
-    background-color: #C2C33B; }
+    background-color: #c2c33b; }
   .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
     background-color: #008895; }
   .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
-    background-color: #AD0054; }
+    background-color: #ad0054; }
   .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
     background-color: #008ab3; }
+
+.b-course-list {
+  margin: 0; }
+  .b-course-list .e-course-item {
+    padding: 30px;
+    list-style-type: none; }
+    .b-course-list .e-course-item:nth-of-type(odd) {
+      background-color: rgba(51, 51, 51, 0.05); }
+    .b-course-list .e-course-item .e-course-title {
+      font-size: 1.4rem; }
+  .b-course-list.m-past-courses > * {
+    opacity: .5; }
+  .b-course-list.m-past-courses > *:hover {
+    opacity: 1; }
+
+.b-top-section.m-clinics, .m-clinics.b-highlights {
+  background-color: #c2c33b; }
+
+.b-top-section.m-coaching, .m-coaching.b-highlights {
+  background-color: #008895; }
+
+.b-top-section.m-masters, .m-masters.b-highlights {
+  background-color: #008ab3; }
+
+.b-top-section.m-workshop, .m-workshop.b-highlights {
+  background-color: #ad0054; }
+
+.b-divider {
+  text-align: center; }

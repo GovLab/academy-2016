@@ -1,60 +1,11 @@
-$clinics-color: #C2C33B;
-$coaching-color: #008895;
-$workshop-color: #008ab3;
-$masters-color: #AD0054;
-
-.b-highlights {
-    @extend .b-top-section;
-    padding: 0;
-
-    .b-slide {
-        padding: 140px 0;
-    }
+.b-top-section {
+    &.m-clinics { background-color: $clinics-color; }
+    &.m-coaching { background-color: $coaching-color; }
+    &.m-masters { background-color: $workshop-color; }
+    &.m-workshop { background-color: $masters-color; }
 }
 
-.b-small-banner {
-    height: 200px;
-
-    &.m-canvas { background-color: $orange; }
-    &.m-noi { background-color: $blue; }
+.b-divider {
+    text-align: center; //let's port this to styleguide
 }
 
-.b-main-categories {
-    .e-item {
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        font-weight: 400;
-        text-align: center;
-        padding: 50px 0;
-        color: $white;
-
-        &.m-clinics { background-color: $clinics-color; }
-        &.m-coaching { background-color: $coaching-color; }
-        &.m-masters { background-color: $workshop-color; }
-        &.m-workshop { background-color: $masters-color; }
-    }
-}
-
-.b-upcoming-courses {
-    .e-item {
-        padding: 50px;
-        height: 350px;
-
-        .b-button { color: $white; }
-
-        &:nth-of-type(odd) { background-color: rgba($black, .05); }
-
-        &.m-clinics {
-            .b-button { background-color: $clinics-color; }
-        }
-        &.m-coaching { 
-            .b-button { background-color: $coaching-color; }
-        }
-        &.m-masters  {
-            .b-button { background-color: $masters-color; }
-        }
-        &.m-workshop { 
-            .b-button { background-color: $workshop-color; }
-        }
-    }
-}

@@ -1,2 +1,11 @@
 @import '../../node_modules/govlab-styleguide/sass/styles.scss'; // govlab-styleguide sass
+
+$clinics-color: #c2c33b;
+$coaching-color: #008895;
+$workshop-color: #008ab3;
+$masters-color: #ad0054;
+
+@import 'homepage';
+@import 'course-list';
+
 @import 'custom';
