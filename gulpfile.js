@@ -20,8 +20,7 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
   return gulp.src('source/sass/styles.scss')  // sass entry point
-  .pipe(plumber())
-  .pipe(sass())
+  .pipe(sass().on('error', sass.logError))
   .pipe(gulp.dest('public/css'))
   .pipe(browserSync.stream());
 });
