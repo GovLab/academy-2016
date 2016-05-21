@@ -1,0 +1,31 @@
+.b-course-list {
+    margin: 0;
+
+    .e-course-item {
+        padding: 30px;
+        list-style-type: none;
+
+        &:nth-of-type(odd) { background-color: rgba($black, .05); }
+
+        .e-course-title {
+            font-size: 1.4rem;
+        }
+
+        .e-course-description {
+
+        }
+
+        .e-course-application {
+
+        }
+
+        .e-course-faculty {
+
+        }
+    }
+
+    &.m-past-courses {
+        > * { opacity: .5; }
+        > *:hover { opacity: 1; }
+    }
+}

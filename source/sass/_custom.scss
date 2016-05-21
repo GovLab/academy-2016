@@ -1,11 +1,21 @@
 .b-top-section {
-    &.m-clinics { background-color: $clinics-color; }
-    &.m-coaching { background-color: $coaching-color; }
-    &.m-masters { background-color: $workshop-color; }
-    &.m-workshop { background-color: $masters-color; }
+  .b-course-detail.m-clinics  & { background-color: $clinics-color; }
+  .b-course-detail.m-coaching & { background-color: $coaching-color; }
+  .b-course-detail.m-masters  & { background-color: $workshop-color; }
+  .b-course-detail.m-workshop & { background-color: $masters-color; }
 }
+
+
+
+
+
+// Things to send to the styleguide
 
 .b-divider {
-    text-align: center; //let's port this to styleguide
+    text-align: center; // let's port this to styleguide
 }
 
+// .b-top-nav.m-alpha { // let's port this to styleguide
+//   background-color: rgba($black, .1) !important;
+//   position: relative;
+// }

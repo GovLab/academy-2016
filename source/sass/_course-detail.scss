@@ -1,0 +1,66 @@
+.b-course-header {
+  @extend .b-top-section;
+  padding-bottom: 0;
+  
+  .e-tagline {
+    margin: 40px 0 30px;
+  }
+
+  .e-apply {
+    text-align: center;
+    padding: 0 0 30px;
+  }
+
+  .e-course-dates {
+    padding: 20px 0;
+
+    background-color: rgba($black, .2);
+
+    h2 { 
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    h3 { 
+      margin: 0; 
+      font-size: 1rem;
+      text-transform: uppercase;
+      font-weight: 400;
+      opacity: .6;
+    }
+  }
+}
+
+.e-course-passion {
+  h2 { font-size: 1.3rem; }
+}
+
+.b-faculty-card {
+  
+  &:nth-of-type(odd) {background-color: rgba($black, .05);}
+  &.m-govlab .e-card-name { background-color: $purple; }  
+
+  .e-card-picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px;
+  }
+
+  .e-card-description {
+    padding: 20px;
+  }
+
+  .e-card-name {
+    margin-top: -35px;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 5px;
+    color: $white;
+    font-weight: 300;
+    letter-spacing: .5px;
+    background-color: $black;
+    opacity: .9;
+  }
+
+  .e-more-info { width: 100%; }
+}
