@@ -1,13 +1,15 @@
+
+// color coding for the top section
 .b-top-section {
-  .b-course-detail.m-clinics  & { background-color: $clinics-color; }
-  .b-course-detail.m-coaching & { background-color: $coaching-color; }
-  .b-course-detail.m-masters  & { background-color: $workshop-color; }
-  .b-course-detail.m-workshop & { background-color: $masters-color; }
+  .b-course-detail.m-clinics  &,
+  .b-course-list.m-clinics  &   { background-color: $clinics-color; }
+  .b-course-detail.m-coaching &,
+  .b-course-list.m-coaching &   { background-color: $coaching-color; }
+  .b-course-detail.m-masters  &,
+  .b-course-list.m-masters  &   { background-color: $workshop-color; }
+  .b-course-detail.m-workshop &,
+  .b-course-list.m-workshop &   { background-color: $masters-color; }
 }
-
-
-
-
 
 // Things to send to the styleguide
 
