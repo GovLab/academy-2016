@@ -509,7 +509,7 @@
     in_person: false
     for_credit: false
     for_certificate: true
-  is_active: true
+  # is_active: true //check with academy team
   when: "TBD"
   when_plus: 
   format: 
@@ -546,7 +546,7 @@
     in_person: false
     for_credit: false
     for_certificate: true
-  is_active: true
+  # is_active: true //check with academy team
   when: "TBD"
   when_plus: 
   format: "1 faculty-led session every month for 2 hours (one hour is with a guest expert and one hour is an all-group session); and a personalized schedule of peer-to-peer and one-on-one coaching sessions."
@@ -588,7 +588,7 @@
     in_person: false
     for_credit: false
     for_certificate: true
-  is_active: true
+  # is_active: true //check with academy team
   when: "TBD"
   when_plus: 
   format: "1 faculty-led session every other week for 2 hours (one hour is with a guest expert and one hour is an all-group session); and a personalized schedule of peer-to-peer and one-on-one coaching sessions."
@@ -628,7 +628,7 @@
     in_person: false
     for_credit: false
     for_certificate: true
-  is_active: true
+  # is_active: true //check with academy team
   when: "TBD"
   when_plus: 
   format: "1 faculty-led session every other week for 2 hours (one hour is with a guest expert and one hour is an all-group session); and a personalized schedule of peer-to-peer and one-on-one coaching sessions."
@@ -636,7 +636,7 @@
 # ==========================================================================================================================================================================================================================================#
 
 - name: "OAS Fellowship Program 2016"
-  is_active: false
+  # is_active: false //check with academy team
   partner: 
   duration: 24 weeks
   apply:
