@@ -4578,6 +4578,7 @@ Styleguide 1.2
   right: 0;
   z-index: 10;
   display: none;
+  background-color: red;
   opacity: .1; }
   #overlay.m-active {
     display: block; }
@@ -5971,8 +5972,6 @@ Markup:
 .m-purple - $purple background
 .m-teal - $teal background
 .m-orange - $orange background
-.m-purple-40k - $purple-40k background
-.m-blue-20k - $blue-20k background
 
 Styleguide 3.4
 */
@@ -6012,12 +6011,6 @@ Styleguide 3.4
 
 .b-divider.m-teal {
   background-color: #008895; }
-
-.b-divider.m-purple-40k {
-  background-color: #381759; }
-
-.b-divider.m-blue-20k {
-  background-color: #006e8f; }
 
 /*
 Slide
@@ -6335,11 +6328,7 @@ first loads.
 
 Markup:
 <!-- #fullwidth -->
-<div class="b-page-section">
-    <div class="row">
-        <p>This produces the sticky at the bottom of the window <i class="material-icons">arrow_downward</i></p>
-    </div>
-</div>
+<p>Check out the purple sticky at the bottom of the window <i class="material-icons">arrow_downward</i></p>
 <div class="b-sticky m-purple">
     <div class="row">
         <div class="column small-12">
@@ -6439,35 +6428,35 @@ Markup:
 
 Styleguide 5.2
 */
-.b-top-section, .b-highlights, .b-course-header {
+.b-top-section, .b-highlights, .b-course-header, .b-faculty-header {
   background-color: #333;
   color: rgba(255, 255, 255, 0.8);
   padding-top: 70px;
   padding-bottom: 30px; }
-  .b-top-section h2, .b-highlights h2, .b-course-header h2 {
+  .b-top-section h2, .b-highlights h2, .b-course-header h2, .b-faculty-header h2 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 100;
     font-size: 30px;
     margin-top: 0; }
-  .b-top-section h3, .b-highlights h3, .b-course-header h3 {
+  .b-top-section h3, .b-highlights h3, .b-course-header h3, .b-faculty-header h3 {
     text-align: center;
     margin-bottom: 30px;
     text-transform: none;
     font-size: 22px;
     font-weight: 100; }
 
-.b-top-section.m-orange, .m-orange.b-highlights, .m-orange.b-course-header {
+.b-top-section.m-orange, .m-orange.b-highlights, .m-orange.b-course-header, .m-orange.b-faculty-header {
   background-color: #ee5b43; }
 
-.b-top-section.m-purple, .m-purple.b-highlights, .m-purple.b-course-header {
+.b-top-section.m-purple, .m-purple.b-highlights, .m-purple.b-course-header, .m-purple.b-faculty-header {
   background-color: #523080; }
 
-.b-top-section.m-blue, .m-blue.b-highlights, .m-blue.b-course-header {
+.b-top-section.m-blue, .m-blue.b-highlights, .m-blue.b-course-header, .m-blue.b-faculty-header {
   background-color: #008ab3; }
 
-.b-top-section.m-teal, .m-teal.b-highlights, .m-teal.b-course-header {
+.b-top-section.m-teal, .m-teal.b-highlights, .m-teal.b-course-header, .m-teal.b-faculty-header {
   background-color: #008895; }
 
 /*
@@ -6772,205 +6761,6 @@ Styleguide 3.7
   .e-card a:hover {
     text-decoration: none; }
 
-/*
-Firebase-Editable
-
-Coming Soon
-
-Styleguide 6.2
-*/
-/*
-Data Visualization
-
-Styleguide 6.3
-*/
-/*
-Bubble map
-
-Data driven bubble map via D3, loosely based on several examples from Mike Bostock <a href="http://bl.ocks.org/mbostock">http://bl.ocks.org/mbostock</a>
-
-Markup:
-<div class="b-map"></div>
-<!-- ----------------------------------------- -->
-<!-- ignore, just used to link to example page -->
-<a class="b-button" href="map1.html">Map I</a>
-<!-- ----------------------------------------- -->
-
-Styleguide 6.3.1
-*/
-.b-map .background {
-  fill: none;
-  pointer-events: all; }
-
-.b-map .feature {
-  fill: #ccc;
-  cursor: pointer; }
-  .b-map .feature.active {
-    fill: orange; }
-
-.b-map .country {
-  fill: none;
-  stroke: #fff;
-  stroke-linecap: round;
-  stroke-linejoin: round; }
-
-.b-map .node.fade circle {
-  opacity: .15;
-  transition: opacity 0.5s; }
-
-.b-map .node circle {
-  opacity: .75;
-  cursor: pointer;
-  transition: opacity 0.5s; }
-  .b-map .node circle.active {
-    opacity: .9;
-    fill: #008ab3 !important;
-    transition: opacity 0.1s; }
-
-.b-map .node text {
-  fill: #fff;
-  cursor: pointer; }
-
-.b-map .region {
-  fill: #ddd;
-  cursor: pointer;
-  transition: fill 0.1s; }
-  .b-map .region.active {
-    fill: #bbb;
-    transition: fill 0.1s; }
-
-/*
-Packlayout map
-
-D3 based bubble map that uses packlayout to nest collections of bubbles into region bounding boxes.
-
-Markup:
-<div class="b-pack-map"></div>
-<!-- ----------------------------------------- -->
-<!-- ignore, just used to link to example page -->
-<a class="b-button" href="map2.html">Map II</a>
-<!-- ----------------------------------------- -->
-
-Styleguide 6.3.2
-*/
-.b-pack-map .background {
-  fill: none;
-  pointer-events: all; }
-
-.b-pack-map .feature {
-  fill: #ccc;
-  cursor: pointer; }
-  .b-pack-map .feature.active {
-    fill: orange; }
-
-.b-pack-map .country {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round; }
-
-.b-pack-map .parent.fade circle {
-  opacity: .15;
-  transition: opacity 0.2s; }
-
-.b-pack-map .parent circle {
-  opacity: .6;
-  cursor: pointer;
-  transition: opacity 0.2s; }
-  .b-pack-map .parent circle.active {
-    opacity: 1;
-    transition: opacity 0.2s; }
-
-.b-pack-map .parent.sector circle {
-  opacity: .5; }
-
-.b-pack-map .parent text {
-  font-size: 22px; }
-
-.b-pack-map .parent.invisible text {
-  visibility: hidden; }
-
-.b-pack-map .parent.invisible circle {
-  opacity: 0;
-  visibility: visible; }
-
-.b-pack-map .parent.invisible.sector circle {
-  opacity: .2; }
-
-.b-pack-map .node.fade circle {
-  opacity: .15;
-  transition: opacity 0.5s; }
-
-.b-pack-map .node circle {
-  opacity: 1;
-  cursor: pointer;
-  transition: opacity 0.2s; }
-  .b-pack-map .node circle.active {
-    opacity: 1;
-    transition: opacity 0.2s; }
-
-.b-pack-map .node text {
-  font-size: 26px; }
-  .b-pack-map .node text.sector-text {
-    font-size: 16px; }
-
-.b-pack-map .node.study {
-  display: none; }
-  .b-pack-map .node.study.fade circle {
-    opacity: .8;
-    transition: opacity 0.5s; }
-    .b-pack-map .node.study.fade circle.active {
-      opacity: 1;
-      transition: opacity 0.2s; }
-  .b-pack-map .node.study text {
-    fill: rgba(0, 0, 0, 0.6);
-    font-size: 16px; }
-  .b-pack-map .node.study.show {
-    display: initial; }
-
-.b-pack-map .region {
-  fill: #ddd;
-  cursor: pointer;
-  transition: fill 0.2s; }
-  .b-pack-map .region.active {
-    fill: #bbb;
-    transition: fill 0.2s; }
-
-.b-pack-map text {
-  fill: #fff;
-  cursor: pointer; }
-
-.b-pack-map .parent {
-  opacity: 0;
-  visibility: hidden; }
-  .b-pack-map .parent.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s; }
-
-.b-pack-map .node {
-  opacity: 0;
-  visibility: hidden; }
-  .b-pack-map .node.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s; }
-
-.map-ui .b-button, .map-ui .b-form input[type="submit"], .b-form .map-ui input[type="submit"] {
-  color: #fff;
-  background-color: rgba(0, 138, 179, 0.4); }
-  .map-ui .b-button.m-active, .map-ui .b-form input.m-active[type="submit"], .b-form .map-ui input.m-active[type="submit"] {
-    background-color: #008ab3; }
-
-.tooltip {
-  color: white;
-  font-size: 16px;
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.02s;
-  width: 200px; }
-  .tooltip::before {
-    border-bottom-color: rgba(0, 0, 0, 0.5); }
-
 .kss-title:hover, .kss-title *:hover {
   text-decoration: none; }
 
@@ -7247,29 +7037,45 @@ code.m-negative {
 .b-faculty-card .e-more-info {
   width: 100%; }
 
-.b-course-detail.m-clinics .b-top-section, .b-course-detail.m-clinics .b-highlights, .b-course-detail.m-clinics .b-course-header,
+.b-course-detail.m-clinics .b-top-section, .b-course-detail.m-clinics .b-highlights, .b-course-detail.m-clinics .b-course-header, .b-course-detail.m-clinics .b-faculty-header,
 .b-course-list.m-clinics .b-top-section,
 .b-course-list.m-clinics .b-highlights,
-.b-course-list.m-clinics .b-course-header {
+.b-course-list.m-clinics .b-course-header,
+.b-course-list.m-clinics .b-faculty-header {
   background-color: #c2c33b; }
 
-.b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header,
+.b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header, .b-course-detail.m-coaching .b-faculty-header,
 .b-course-list.m-coaching .b-top-section,
 .b-course-list.m-coaching .b-highlights,
-.b-course-list.m-coaching .b-course-header {
+.b-course-list.m-coaching .b-course-header,
+.b-course-list.m-coaching .b-faculty-header {
   background-color: #008895; }
 
-.b-course-detail.m-masters .b-top-section, .b-course-detail.m-masters .b-highlights, .b-course-detail.m-masters .b-course-header,
+.b-course-detail.m-masters .b-top-section, .b-course-detail.m-masters .b-highlights, .b-course-detail.m-masters .b-course-header, .b-course-detail.m-masters .b-faculty-header,
 .b-course-list.m-masters .b-top-section,
 .b-course-list.m-masters .b-highlights,
-.b-course-list.m-masters .b-course-header {
+.b-course-list.m-masters .b-course-header,
+.b-course-list.m-masters .b-faculty-header {
   background-color: #008ab3; }
 
-.b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header,
+.b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header, .b-course-detail.m-workshop .b-faculty-header,
 .b-course-list.m-workshop .b-top-section,
 .b-course-list.m-workshop .b-highlights,
-.b-course-list.m-workshop .b-course-header {
+.b-course-list.m-workshop .b-course-header,
+.b-course-list.m-workshop .b-faculty-header {
   background-color: #ad0054; }
 
 .b-divider {
   text-align: center; }
+
+.b-faculty-header {
+  text-align: center; }
+  .b-faculty-header .e-faculty-picture {
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    background-size: 100%;
+    background-position: center; }
