@@ -21,3 +21,22 @@
 //   background-color: rgba($black, .1) !important;
 //   position: relative;
 // }
+
+
+
+// Faculty Page Styles
+
+.b-faculty-header {
+  @extend .b-top-section;
+  text-align: center;
+
+  .e-faculty-picture {
+    margin: 0 auto 30px;
+    @include circle;
+    width: 300px;
+    height: 300px;
+    padding: 0;
+    background-size: 100%;
+    background-position: center;
+  }
+}
