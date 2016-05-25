@@ -1,9 +1,11 @@
 ---
 
+
 - name:
     last: Berens
     first: Jos
     slug: jos-berens
+  title: Jos Berens
   job: Project Coordinator of the Data Governance Project
   is_govlab: false
   description: "Jos Berens is the Project Coordinator of the Data Governance Project (DGP), an international multidisciplinary collaboration between the Governance Lab, the World Economic Forum, and Leiden University. The collaboration focuses on building an expert network to solve questions regarding corporate data sharing for social good, particularly in a development context. Working with a number of international organisations, the DGP looks at concrete governance issues in the data for development space. Based on the solutions found, the DGP is developing a framework for corporate data sharing for social good. Jos holds an LL.B in Dutch Law and a BA in Philosophy of a Specific Discipline, both obtained at Groningen University. He is currently pursuing an LL.M in Dutch Criminal Law and an LL.M in Public International Law, the former in Groningen and the latter at Utrecht University. Jos specialises in privacy, data ethics and benefit/risk assessment regarding data collection and use."
@@ -19,6 +21,7 @@
     last: Behlendorf
     first: Brian
     slug: brian-behlendorf
+  title: Brian Behlendorf
   job: Managing Director at Mithril Capital Management
   is_govlab: false
   description: "Brian Behlendorf is Managing Director at Mithril Capital Management in San Francisco.  His career has been a mix of technology start-up, public policy, and non-profit tech leadership. Brian serves on the Boards of the Mozilla Foundation, the Electronic Frontier Foundation, and Benetech, three organizations using technology to fight for civil liberties, open technologies, and social impact in the digital domain.  Prior to Mithril, Brian was Chief Technology Officer at the World Economic Forum.  He also served for two years at the White House as advisor to the Open Government project within the Office of Science and Technology Policy, and then later as advisor to Health and Human Services on open software approaches to health information sharing.  Before that he has founded two tech companies (CollabNet and Organic) and several Open Source software projects (Apache, Subversion, and more)."
@@ -34,6 +37,7 @@
     last: Clare
     first: Alexandra
     slug: alexandra-clare
+  title: Alexandra Clare
   job: Founder of Iraq Re:Coded
   is_govlab: false
   description: "Before arriving at the GovLab, Ali worked as a criminal prosecutor for the Australian Government and as a fellow at United Nations Office of the Special Representative for Children and Armed Conflict, Human Rights Watch and at International Crisis Group undertaking research and advocacy on various crisis situations from Syria to the Democratic Republic of Congo."
@@ -50,6 +54,7 @@
     last: Mulgan
     first: Geoff
     slug: geoff-mulgan
+  title: Geoff Mulgan
   job: Chief Executive of NESTA
   is_govlab: false
   description: "Geoff Mulgan CBE (born 1961) is Chief Executive of the National Endowment for Science Technology and the Arts (NESTA)[1] and Visiting Professor at University College London, the London School of Economics, the University of Melbourne and a regular lecturer at the China Executive Leadership Academy. He is an adviser to many governments around the world, and has been a board member of the Work Foundation, the Health Innovation Council, Political Quarterly and the Design Council, and chair of Involve. He is also currently chair of the Studio Schools Trust and the Social Innovation Exchange. His recent books include The Art of Public Strategy - Mobilising Power and Knowledge for the Public Good, Good and Bad Power: the ideals and betrayals of government and Connexity. His latest book The Locust and the Bee was published by Princeton University Press in March 2013. Read more on some of the ideas Geoff has been involved in over the years."
@@ -65,6 +70,7 @@
     last: Kallos
     first: Benjamin
     slug: benjamin-kallos
+  title: Benjamin Kallos
   job: Chair of the Committee on Governmental Operations of the City Council
   is_govlab: false
   description: 'At the beginning of his career in public service, Ben Kallos put Albany voting records online so New Yorkers could hold politicians accountable. Since then, he has run a government reform organization that helped defeat a corrupt politician and has served as Policy Director for former Public Advocate Mark Green. Council Member Kallos serves as Chair of the Committee on Governmental Operations of the City Council, where he has fought to bring reform and transparency to government agencies. Praised by the New York Times for his "fresh ideas," Council Member Kallos has advocated for improving our schools, senior services and transportation. Council Member Kallos graduated from Bronx Science, SUNY Albany and SUNY Buffalo Law School. He has a background in law, working as a union-side labor attorney, as well as technology and government, and has served as a member of Community Board 8 and Statewide Committee Chair for the New York Democratic Lawyers Council. He and his wife reside on the East Side, where he has lived his entire life.'
@@ -80,6 +86,7 @@
     last: Peixoto
     first: Tiago
     slug: tiago-peixoto
+  title: Tiago Peixoto
   job: Team Lead at the Digital Engagement Unit of the World Bank
   is_govlab: false
   description: 'Tiago Peixoto (PhD) is a Team Lead at the World Bank’s Digital Engagement Unit. Featured in TechCrunch as one of the “20 Most Innovative People in Democracy”, Tiago is an internationally recognized expert working at the intersection of technology and citizen engagement. At the World Bank his activities focus on working with governments to leverage technology-enabled participation for better public policies and services. As the lead of the Bank’s Digital Engagement Evaluation Team (DEET), he coordinates evaluation and research activities that apply cutting-edge methodologies to examine the effects of technology on participation, transparency, accountability and government responsiveness. Prior to joining the World Bank, Tiago managed projects and worked as an advisor and consultant for various organizations, such as the European Commission, OECD, United Nations, and the Brazilian and UK governments. A Research Director of the Electronic Democracy Centre at the University of Zurich and faculty member of NYU’s Governance Lab, Tiago holds a PhD and a Masters in Political Sciences from the European University Institute, as well as a Masters in Organized Collective Action from Sciences-Po Paris. He blogs at DemocracySpot.net and tweets at @participatory'
@@ -96,6 +103,7 @@
     last: Nisbet
     first: Miriam
     slug: mirian-nisbet
+  title: Miriam Nisbet
   job: Former Director of the Office of Government Information Services
   is_govlab: false
   description: "Miriam Nisbet was the founding Director of the Office of Government Information Services (OGIS), National Archives and Records Administration (NARA). Created by the 2007 amendments to the Freedom of Information Act, OGIS is the federal FOIA ombudsman office, charged with providing mediation services to resolve disputes between FOIA requesters and federal agencies and with improving FOIA administration. Miriam retired in November 2014. She previously worked for the United Nations Educational, Scientific and Cultural Organization (UNESCO), the American Library Association, NARA, and the US Department of Justice. She is a member of the Bars of the District of Columbia and North Carolina."
@@ -111,6 +119,7 @@
     last: Russon Gilman
     first: Hollie
     slug: hollie-russon-gilman
+  title: Hollie Russon Gilman
   job: "Fellow, New America Foundation and expert, Participatory Budgeting"
   is_govlab: false
   description: "Hollie Russon Gilman holds a Ph.D. and M.A. from the Department of Government at Harvard University and A.B. from the University of Chicago with highest honors in political science.  Her dissertation is the first academic study of participatory budgeting in the U.S.  Dr. Gilman is an expert in technology, civic engagement, innovation, and governance. She most recently served as Open Government and Innovation Advisor in the White House Office of Science and Technology Policy.  In this role, she worked to implement President Obama's second term Open Government agenda, including inter-agency commitments under the international Open Government Partnership. Dr. Gilman is a founding researcher and organizer for the Open Society Foundation's Transparency and Accountability Initiative and Harvard's Gettysburg Project to revitalize 21st Century civic engagement. She has worked as an advisor, researcher, and consultant to leading non-profits and foundations at the intersection of technology and the public sector including the Case Foundation, Center for Global Development, Google.org, and the World Bank Institute. She has published in numerous academic and popular audience publications including the International Studies Review and Journal of Public Deliberation.  Her writings appear frequently in diverse publications including Al Jazeera America, Brookings' TechTank, Boston Globe, Harvard's Challenges to Democracy, Next City, Slate and Vox."
@@ -126,6 +135,7 @@
     last: Noveck
     first: Beth Simone
     slug: beth-simone-noveck
+  title: Beth Simone Noveck
   job: Founder of The GovLab
   description: "Beth Simone Noveck directs The Governance Lab and its MacArthur Research Network on Opening Governance. Funded by the John D. and Catherine T. MacArthur Foundation, the John S. and James L. Knight Foundation and Google.org, the GovLab strives to improve people’s lives by changing how we govern. The GovLab designs and tests technology, policy and strategies for fostering more open and collaborative approaches to strengthen the ability of people and institutions to work together to solve problems, make decisions, resolve conflict and govern themselves more effectively and legitimately. The Jerry Hultin Global Network Visiting Professor at New York University’s Polytechnic School of Engineering, she was formerly the Jacob K. Javits Visiting Professor at the Robert F. Wagner Graduate School of Public Service and a visiting professor at the MIT Media Lab. Beth is a professor of law at New York Law School. She served in the White House as the first United States Deputy Chief Technology Officer and director of the White House Open Government Initiative (2009-2011). UK Prime Minister David Cameron appointed her senior advisor for Open Government, and she served on the Obama-Biden transition team. Among projects she’s designed or collaborated on are Unchat, The Do Tank, Peer To Patent, Data.gov, Challenge.gov and the Gov Lab’s Living Labs and training platform, The Academy. A graduate of Harvard University and Yale Law School, she serves on the Global Commission on Internet Governance and chaired the ICANN Strategy Panel on Multi-Stakeholder Innovation. She is a member of the Advisory Board of the Open Contracting Partnership. She was named one of the “Foreign Policy 100″ by Foreign Policy, one of the “100 Most Creative People in Business” by Fast Company and one of the “Top Women in Technology” by Huffington Post. She has also been honored by both the National Democratic Institute and Public Knowledge for her work in civic technology. Beth is the author of Wiki Government: How Technology Can Make Government Better, Democracy Stronger and Citizens More Powerful, which has also appeared in Arabic, Russian, Chinese and in an audio edition, and co-editor of The State of Play: Law, Games and Virtual Worlds. Her next book Smart Citizens: Smarter State will appear with Harvard University Press. She tweets @bethnoveck."
   is_govlab: true
@@ -141,6 +151,7 @@
     last: Kantrow
     first: Alan
     slug: alan-kantrow
+  title: Alan Kantrow
   job: Senior Advisor
   is_govlab: true
   description: "Alan Kantrow is Senior Advisor of The GovLab. Prior to joining The GovLab, Alan was Managing Partner of Alan Kantrow LLC, where he provided advice on strategy, organization, innovation, communication, and knowledge management to corporations, colleges and universities, and government entities focused on educational and economic development in many different parts of the world. He is also a Senior Advisor to HCD Global in Shanghai. In parallel, he has been Professor of Management and Director of an infrastructure-focused research center at Moscow School of Management/Skolkovo, Visiting Scholar at Sloan School of Management (MIT), and adjunct lecturer in strategy at Babson College. Previously, for more than a dozen years, Alan was a Senior Partner and Chief Knowledge Officer at Monitor Group. Before that has was a Partner and Director of Communications for Asia-Pacific at McKinsey & Company, as well as Editor of the McKinsey Quarterly. Still earlier, he was a Founding Partner of Winthrop Group (business historians) and Senior Editor of Harvard Business Review. He is the author of several books and many articles, and his blog on tertiary education can be found at HBR.org. Alan holds both his AB and PhD from Harvard University."
@@ -163,6 +174,7 @@
     last: Young
     first: Andrew
     slug: andrew-young
+  title: Andrew Young
   job: Associate Director of Research
   is_govlab: true
   description: "Andrew Young is the GovLab’s Associate Director of Research. He earned his Master’s degree in the Media, Culture and Communication department of NYU’s Steinhardt School of Culture, Education and Human Development, with a focus on Technology and Society. In addition to open governance, his research interests include privacy, Internet activism, values in design and the ethical implications of the use of new technologies in politics. His Master’s thesis explored the largely unexamined use of data-tracking technologies on congressional campaign websites to inform microtargeting efforts, and won the department’s Outstanding Thesis Award. Before arriving at the GovLab, Andrew worked with Chief of Research Stefaan Verhulst at the Markle Foundation, where his research centered on the use of technology to bolster economic security. Prior to his graduate work at NYU, Andrew attended Pennsylvania State University, where he studied English and Communications. He also spent two semesters at Goldsmiths College, University of London. He can be found on Twitter at @AndrewYoungNYC."
@@ -179,6 +191,7 @@
     last: Sahuguet
     first: Arnaud
     slug: arnaud-sahuguet
+  title: Arnaud Sahuguet
   job: Director of The Foundry @ Cornell Tech
   is_govlab: true
   description: "Dr. Arnaud Sahuguet was until recently a Product Manager for Google.org in New York working on civic innovation, as part of the Google social impact team. For the last two years, he has been working on mobile micro-donations (OneToday) and child protection (in collaboration with the National Center for Missing and Exploited Children). Before Google.org, he worked on Google Maps infrastructure and helped the Google Speech team productize its technology, with products such as GOOG-411 and Voice Search. Before joining Google in 2006, he worked almost 5 years as a Member of Technical Staff at Bell Labs research, in Murray Hill, NJ, where he published numerous papers, worked on standards for user profile management in telecom networks, identity management, personalization and converged services. Arnaud got his PhD from UPenn, on the topic of distributed query languages and optimization. While at UPenn, Arnaud founded Tropean Inc, to commercialize a screen scrapping technology for web sites. Before that, he graduated from Ecole Nationale des Ponts et Chaussées in France (MSc in Civil Engineering) and from Ecole Polytechnique (BS)."
@@ -195,6 +208,7 @@
     last: Cantú-Pedraza
     first: Dinorah
     slug: dinorah-cantu
+  title: Dinorah Cantú-Pedraza
   job: Coaching Programs Coordinator
   is_govlab: true
   description: "Dinorah Cantu coordinates the GovLab Academy, a Knight-Foundation funded online institute aimed at helping government and social innovators take innovative projects from idea to implementation. Under her direction, the Academy has worked with over five hundred innovators from more than 30 countries online and off over the last two years. Thousands more have watched its skill-building videos. She has put together over 12 Coaching Programs, the Academy’s signature mentoring and peer to peer learning initiative, where over 95% of whose participants complete the program. The Academy is a project of the Governance Lab, based at New York University. GovLab focuses on the use of technology to improve how we govern. Dinorah has also designed the GovLab’s Crowdsorcerer expert system, a software tool to deliver customized case studies to government leaders about open innovation. Working together with lawyers and education experts from NYU, she also designed an expert system to help universities determine the legal requirements for offering online education. She also runs the GovLab’s Demos for Democracy video series where she interviews leading technologists about new platforms to advance the public interest. A lawyer by training, Dinorah founded and directed the Human Rights Center of the Facultad Libre de Derecho de Monterrey prior to coming to New York in 2012. She holds an MPA in Public and Nonprofit Management and Policy at NYU Robert F. Wagner School of Public Service and is passionate about the value of civic technology for strengthening human rights. She is bilingual in English and Spanish and tweets at @dinorah_cantu."
@@ -211,6 +225,7 @@
     last: Verhulst
     first: Stefaan
     slug: stefaan-verhulst
+  title: Stefaan Verhulst
   job: Co-Founder and Chief Research and Development Officer
   is_govlab: true
   description: "Stefaan G. Verhulst is Co-Founder and Chief Research and Development Officer of the Governance Laboratory @NYU (GovLab) where he is responsible for building a research foundation on how to transform governance using advances in science and technology. Verhulst’s latest scholarship centers on how technology can improve people’s lives and the creation of more effective and collaborative forms of governance. Specifically, he is interested in the perils and promise of collaborative technologies and how to harness the unprecedented volume of information to advance the public good. Before joining NYU full time, Verhulst spent more than a decade as Chief of Research for the Markle Foundation, where he continues to serve as Senior Advisor. At Markle, an operational foundation based in New York, he was responsible for overseeing strategic research on all the priority areas of the Foundation including, for instance: transforming health care using information and technology, re-engineering government to respond to new national security threats, improving people’s lives in developing countries by connecting them to information networks, developing multi-stakeholder networks to tackle global governance challenges, changing education through information technology et al. Many of Markle’s reports have been translated into legislation and executive orders, and have informed the creation of new organizations and businesses. He is also an Adjunct Professor in the Department of Culture and Communications at New York University, Senior Research Fellow for the Center for Media and Communications Studies at Central European University in Budapest; and an Affiliated Senior Research Fellow at the Center for Global Communications Studies at the University of Pennsylvania’s Annenberg School for Communications. Previously at Oxford University he co-founded and was the Head of the Programme in Comparative Media Law and Policy at the Centre for Socio Legal Studies, and also served as Senior Research Fellow of Wolfson College. He is still an emeritus fellow at Oxford. He also taught several years at the London School of Economics. Verhulst was the UNESCO Chairholder in Communications Law and Policy for the UK, a former lecturer on Communications Law and Policy issues in Belgium, and Founder and Co-Director of the International Media and Info-Comms Policy and Law Studies at the University of Glasgow School of Law. He has served as a consultant to numerous international and national organizations, including the Council of Europe, the European Commission, UNESCO, World Bank, UNDP, USAID, the UK Department for International Development among others. He has been a grant recipient of the Bertelsmann Foundation, the Ford Foundation, the Rockefeller Foundation, and the Markle Foundation. Verhulst has authored and co-authored several books, including: In Search of the Self: Conceptual Approaches to Internet Self Regulation (Routledge, 2001); Convergence in European Communications Regulation (Blackstone, 1999); EC Media Law and Policy (AWL, 1998); Legal Responses to the Changing Media (OUP, 1998); and Broadcasting Reform in India (OUP, 1998). Most recently, he co-edited The Routledge Handbook of Media Law (2013). Verhulst is also founder and editor of numerous journals including the International Journal of Communications Law and Policy, and the Communications Law in Transition Newsletter."
@@ -226,6 +241,7 @@
     last: Grey
     first: Francois
     slug: francois-grey
+  title: Francois Grey
   job: Coordinator of the Citizen Cyberscience Centre 
   is_govlab: false
   description: |
@@ -248,6 +264,7 @@
     last: Johnson
     first: Clay
     slug: clay-johnson
+  title: Clay Johnson
   job: Chairman of the Department of Better Technology
   is_govlab: false
   description: "Clay Johnson is an American technologist, co-founder and Chairman of the Department of Better Technology and best known for his role in supporting political campaigns and government agencies with technology services. He was one of the founders of Blue State Digital, the firm that built and managed Barack Obama’s online campaign for the presidency in 2008. After leaving Blue State, Johnson was the director of Sunlight Labs at the Sunlight Foundation, where he built an army of 2000 developers and designers to build open source tools to give people greater access to government data. He was awarded the Google/O’Reilly Open Source Organizer of the year in 2009, was one of Federal Computing Week’s Fed 100 in 2010, and won the CampaignTech Innovator award in 2011. Johnson’s combination of experience as a developer, working in politics, entrepreneurism, and non-profit work gives him a unique perspective on media and culture. His life is dedicated to giving people greater access to the truth about what’s going on in their communities, their cities and their governments. He still claims that he learned all he needs to know from a two year tour as the late-shift waiter at Waffle House in Atlanta, GA."
@@ -263,6 +280,7 @@
     last: van den Steenhoven
     first: Joeri
     slug: joeri-van-den-steenhoven
+  title: Joeri van den Steenhoven
   job: Director of the MaRS Solutions Lab
   is_govlab: false
   description: "Joeri van den Steenhoven is the Director of the MaRS Solutions Lab. He is a longtime social innovator fascinated by our society’s transition towards the knowledge society. Being a systems thinker, he likes to work on wicked problems and find innovative solutions with others. Joeri co-founded Kennisland, one of the leading change labs in the Netherlands and Europe. He also co-founded the KafkaBrigade, a research team that helps governments find and tackle red tape. He regularly advises, speaks and teaches on how to create system change. Joeri has worked with organizations like the Young Foundation (UK) and serves on the board of the Lisbon Council, the leading European thinktank on innovation and growth."
@@ -278,6 +296,7 @@
     last: Lakhani
     first: Karim
     slug: karim-lakhani
+  title: Karim Lakhani
   job: Lumry Family Associate Professor of Business Administration at the Harvard Business School
   is_govlab: false
   description: >
@@ -296,6 +315,7 @@
     last: Hayman
     first: Gavin 
     slug: gavin-hayman
+  title: Gavin Hayman
   job: Executive Director of the Open Contracting Partnership
   is_govlab: false
   description: >
@@ -313,6 +333,7 @@
     last: Mashariki
     first: Amen Ra
     slug: amen-ra-mashariki
+  title: Amen Ra Mashariki
   job: Chief Analytics Officer of New York City
   is_govlab: false
   description: >
@@ -329,6 +350,7 @@
     last: Barry
     first: Liz
     slug: liz-barry
+  title: Liz Barry
   job: "Co-founder & Director of Community Development at the Public Lab"
   is_govlab: false
   description: >
@@ -345,6 +367,7 @@
     last: Kishor
     first: Puneet
     slug: "puneet-kishor" 
+  title: Puneet Kishor
   job: Univ of Wisconsin and Former Manager of Science and Data Policy at Creative Commons
   is_govlab: false
   description: >
@@ -363,6 +386,7 @@
     last: Brabham
     first: Daren C.
     slug: "daren-brabham" 
+  title: Daren C. Brabham
   job: Assistant Professor in the Annenberg School for Communication & Journalism at the University of Southern California
   is_govlab: false
   description: >
@@ -383,6 +407,7 @@
     last: Timms
     first: Henry
     slug: "henry-timms"
+  title: Henry Timms
   job: "Executive Director 92Y and Founder #GivingTuesday"
   is_govlab: false
   description: "As Executive Director of 92nd Street Y, Henry creates programs and movements that foster learning, civic responsibility, culture and innovation, both in New York City and around the world. He is the founder of #GivingTuesday, a global philanthropic movement that engages more than 27,000 partners worldwide and was awarded a Cannes Lion at the International Festival of Creativity; a PRWeek Global Award for Nonprofit Campaign of the Year; and the inaugural UJA-Federation Riklis Prize in Agency Entrepreneurship. Henry’s work has been profiled in publications like the Harvard Business Review, and his most recent thinking with Jeremy Heimans on “new power” was featured as the Big Idea in HBR and by CNN as one of the ten top ideas to change the world in 2015. Henry is a Practitioner-in-Residence at the Stanford University Center on Philanthropy and Civil Society and a member of the World Economic Forum’s Network of Global Agenda Councils. Henry was named the NonProfit Times Influencer of the Year in 2014 and was honored as one of Crain’s New York Business 40 under 40 in 2015."
@@ -398,6 +423,7 @@
     last: Carver
     first: Julian
     slug: "julian-carver"
+  title: Julian Carver
   job: "Data Driven Innovation Consultant and Former CIO of the Canterbury Earthquake Recovery Authority"
   is_govlab: false
   description: "Julian Carver is an investor, startup mentor, and technology innovator in the public and private sectors. He founded and exited three web software startups from 1995-2000. From 2000-2011 he led large shared services projects and data sharing strategies across central and local government and the private sector. In 2011 Julian worked with the Government Data and Information Reuse Secretariat to develop New Zealand’s Declaration on Open and Transparent Government. From April 2011 - June 2012 Julian led the establishment of information services at the Canterbury Earthquake Recovery Authority (CERA), as acting Chief Information Officer. From March 2013 - April 2015 he led the Canterbury Spatial Data Infrastructure (SDI) Programme at LINZ, a $5m investment in a set of eight ICT projects to support the $40 billion Christchurch rebuild."
@@ -413,6 +439,7 @@
     last: Hermosilla
     first: María
     slug: maria-hermosilla
+  title: María Hermosilla
   job: Research Fellow
   description: >
     <p>Research Fellow Maria Hermosilla focuses her work on governance innovation in Latin America. At the GovLab, she does both research and project design and management.</p>
@@ -436,6 +463,7 @@
     last: Tovar
     first: Ana
     slug: ana-tovar
+  title: Ana Tovar
   job: Legal Research Fellow
   description: >
     <p>Ana is a Legal Research Fellow at the GovLab. She is a native of Mexico City. Ana recently received her Masters of Law from Yale Law School where she was selected to be a Global Health Justice Partnership (GHJP) Student Fellow in a collaborative initiative of Yale Law School and Yale School of Public Health. She was a staff editor of the Yale Journal of Health Policy, Law and Ethics.</p>
