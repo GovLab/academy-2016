@@ -12,10 +12,25 @@
     <div class="row">
       <div class="large-12 column">
         <h1>Workshops</h1>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos illum omnis atque error nihil! Asperiores aliquid cumque rem doloribus saepe quas nam perferendis minima, ut ullam quis tenetur eaque eveniet.</h3>
+        <h3>Limited enrollment (maximum class size 30; maximum number of teams, 6), customized 1-3 day, intensively “hands on,” in-person working sessions for city - and government agency-based teams preparing to wrestle with the specific issues and challenges at one or another stage of the governance innovation process.</h3>
       </div>
     </div>
   </div>
+
+  <div class="b-page-section">
+    <div class="row">
+      <div class="large-12 column">
+        <h3>Few workshops are offered on specific dates and open to application by all</h3>
+        <ul>
+            <li><strong>WHO</strong> Teams of civic entrepreneurs, especially in government or other organizations. Maximum of 30 individuals and/or 6 teams</li>
+            <li><strong>WHAT</strong> Highly interactive workshop, leveraging a combination of mini-lectures, team-based exercises, and post-session follow-up</li>
+            <li><strong>WHEN</strong> 1-2 day sessions by arrangement</li>
+            <li><strong>WHERE</strong> In-person</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="b-divider">
     <div class="row">
       <div class="large-12 column">
@@ -24,40 +39,30 @@
     </div>
   </div>
   <ul class="b-course-list">
-    <li class="e-course-item">
-      <div class="row">
-        <div class="large-12 column">
-          <h2 class="e-course-title">Coaching Program for Data Driven Criminal Justice Projects</h2>
-        </div>
-        <div class="large-6 column">
-          
-          <p class="e-course-application">APPLICATION DUE: MAY 23, 2016</p>
-          <div class="e-course-faculty-team row column">
-            {# {{ faculty('Stefaan Verhulst') }} #}
-
-            <div class="e-course-faculty column large-3" style="background-image: url('./img/faculty/stefaan-verhulst.jpg');">
-              <p>Stefaan Verhulst</p>
+    {% for course in workshops %}
+      <li class="e-course-item">
+        <div class="row">
+          <div class="large-12 column">
+            <h2 class="e-course-title">{{ course.name }}</h2>
+          </div>
+          <div class="large-6 column">
+            
+            <p class="e-course-application">APPLICATION DUE: {{ course.date.application}}</p>
+            <div class="e-course-faculty-team row column">
+              {% for name in course.faculty_members %}
+                <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ name | slug }}.jpg');">
+                  <p>{{ name }}</p>
+                </div>
+              {% endfor %}
             </div>
-            <div class="e-course-faculty column large-3" style="background-image: url('./img/faculty/beth-simone-noveck.jpg');">
-              <p>Beth Simone Noveck</p>
-            </div>
-            <div class="e-course-faculty column large-3 " style="background-image: url('./img/faculty/ana-tovar.jpg');">
-              <p>Ana Tovar</p>
-            </div>
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/alan-kantrow.jpg');">
-              <p>Alan Kantrow</p>
-            </div>
-            {# <div class="e-course-faculty">Beth Simone Noveck</div>
-            <div class="e-course-faculty">Ana Tovar</div>
-            <div class="e-course-faculty">Alan Kantrow</div> #}
+          </div>
+          <div class="large-6 column">
+            <p class="e-course-description">{{course.description_short | safe}}</p>
+            <a href="{{ course.id }}.html" class="b-button">more info</a>
           </div>
         </div>
-        <div class="large-6 column">
-          <p class="e-course-description">The way government purchases, especially information technology, is profoundly broken. Government should not be spending as much to make a website as it invests in scientific research to map the human brain. Contracts should not get awarded to the same enterprise over and over again but attract more and more diverse competitors.</p>
-          <a href="#" class="b-button">more info</a>
-        </div>
-      </div>
-    </li>
+      </li>
+    {% endfor %}
 
     <li class="e-course-item">
       <div class="row">
