@@ -40,3 +40,35 @@
     background-position: center;
   }
 }
+
+
+// Govlab Opensource Component - Port this to styleguide, for replication
+
+.govlab-opensource {
+  background-color: #222;
+  padding: 12px 0 15px;
+  text-align: center;
+
+  a { 
+    opacity: .3;
+    text-decoration: none;
+    transform: scale(1);
+    display: inline-block;
+    transition: all 1s ease;
+
+    &:hover {
+      transition: all .7s ease;
+      opacity: 1;
+      transform: scale(1.1);
+    }
+
+    color: #fff;
+    font-size: 1rem;
+    vertical-align: -3px;
+  }
+
+  img {
+    max-height: 24px;
+    margin-left: 8px;
+  }
+}
