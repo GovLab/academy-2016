@@ -1,0 +1,100 @@
+{% extends '_base.html' %}
+{% block main %}
+<div class="b-course-detail m-coaching">
+  <div class="b-course-header "> {# This gets the course type class modifier for color coding #}
+    <div class="row">
+      <div class="large-8 column large-centered">
+        <h2>Coaching Program <br>for {{name}}</h2>
+        <h3 class="e-tagline">{{ description_short | safe }}</h3>
+        <div class="e-apply"><a href="#" class="b-button">Apply</a></div>
+      </div>
+    </div>
+
+    <div class="e-course-dates">
+      {# This is kind of creepy, but makes sense in the Foundation way of building narrower content #}
+      <div class="row">
+        <div class="large-9 large-centered">
+          <div class="row">
+            <div class="large-4 column">
+              <h3 class="e-course-date">Application Deadline</h3>
+              <h2 class="e-course-date">{{date.application}}</h2>
+            </div>
+            <div class="large-4 column">
+              <h3 class="e-course-date">starts the week of</h3>
+              <h2 class="e-course-date">{{date.week_start}}</h2>
+            </div>
+            <div class="large-4 column">
+              <h3 class="e-course-date">Course Ends on</h3>
+              <h2 class="e-course-date">{{date.end}}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="b-page-section">
+    <div class="row">
+      <div class="large-9 column large-centered">
+        <div class="e-course-passion">
+          <h2>{{passion.title}}</h2>  
+          <ul>
+            {% for item in passion.bullets %}
+              <li>{{ item | safe }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="b-divider">
+    <div class="row">
+      <div class="large-12 column"><h2>Course Description</h2></div>
+    </div>
+  </div>
+  <div class="b-page-section">
+    <div class="row">
+      <div class="large-9 column large-centered">
+        <div class="row e-course-description">
+          <div class="large-6 column">
+            {{description_long | safe}}
+          </div>
+          
+          <div class="large-6 column">
+            <p><strong>Course Format:</strong>{{format}}</p>
+            <div class="b-format">
+            {% if when %}
+              <p>Online sessions will be held <strong>{{when}}</strong></p>
+              {% if when_plus %}<p><em>{{when_plus}}</em></p>{% endif %}
+            {% endif %}
+            <p><strong>Course Duration:</strong> {{duration}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="b-divider">
+    <div class="row">
+      <div class="large-12 column">
+        <h3>Faculty Members</h3>
+      </div>
+    </div>
+  </div>
+  <div class="b-faculty-members">
+    <div class="row expanded collapse">
+      
+      {# This should be a macro?? #} 
+      {# NEED TO COLOR CODE FACULTY #}
+      {% for name in faculty_members %}
+        <div class="large-3 column b-faculty-card m-govlab end">
+          <div class="e-card-picture" style="background-image: url(./img/faculty/{{ name | slug}}.jpg);"></div>
+          <h1 class="e-card-name ">{{ name }}</h1>
+          <p class="e-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero esse sunt placeat commodi nobis doloremque accusantium voluptatem eius quidem, magni. Eius aspernatur quasi id aliquid cupiditate, ea dolor, odio tempora.</p>
+          <div class="b-button e-more-info">Go to profile</div>
+        </div>
+      {% endfor %}
+      {# end of macro?? #}
+
+    </div>
+  </div>
+</div>
+{% endblock %}
