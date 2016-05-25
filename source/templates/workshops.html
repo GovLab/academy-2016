@@ -47,7 +47,7 @@
           </div>
           <div class="large-6 column">
             
-            <p class="e-course-application">APPLICATION DUE: {{ course.date.application}}</p>
+            <p class="e-course-application">APPLICATION DUE: {{ course.date }}</p>
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
                 <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ name | slug }}.jpg');">
@@ -58,7 +58,13 @@
           </div>
           <div class="large-6 column">
             <p class="e-course-description">{{course.description_short | safe}}</p>
-            <a href="{{ course.id }}.html" class="b-button">more info</a>
+            <!-- COURSE LINKS FOR WORKSHOPS -->
+            {% if course.actions %}
+              {% for action in course.actions %}
+                <a class="b-button" href="{{action.link}}">{{action.label}}</a>
+              {% endfor %}
+            {% endif %}
+            <!-- END COURSE LINKS FOR WORKSHOP -->
           </div>
         </div>
       </li>
