@@ -54,9 +54,16 @@ function slugify(t) {
   : false ;
 }
 
-// set up nunjucks environment
-function nunjucksEnv(env) {
-  env.addFilter('slug', slugify);
+function returnPerson(p) {
+  var person;
+  var peopleJSON = require('./source/data/people.json');
+  for (var i = 0; i < peopleJSON.data.length; i++) {
+    var fullName = peopleJSON.data[i].name.first + " " + peopleJSON.data[i].name.last;
+    if (fullName === p) {
+      person = peopleJSON.data[i];
+    } 
+  }
+  return person;
 }
 
 // define custom functions ///////////////////////////////////
@@ -75,6 +82,7 @@ function slugify(t) {
 // set up nunjucks environment
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
+  env.addFilter('returnPerson', returnPerson);
 }
 
 // compile all the datasets into a composite set

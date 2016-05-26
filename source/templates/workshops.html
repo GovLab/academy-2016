@@ -50,8 +50,13 @@
             <p class="e-course-application">APPLICATION DUE: {{ course.date }}</p>
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
+              {% set person = name | returnPerson %}
                 <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ name | slug }}.jpg');">
-                  <p>{{ name }}</p>
+                  {% if person %}
+                  <p>{{person.name.first}} {{person.name.last}}</p>
+                  {% else %}
+                  <p>{{name}}</p>
+                  {% endif %}
                 </div>
               {% endfor %}
             </div>
