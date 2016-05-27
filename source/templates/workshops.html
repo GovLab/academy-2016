@@ -40,6 +40,7 @@
   </div>
   <ul class="b-course-list">
     {% for course in workshops %}
+      {% if not course.is_crosslisted %}
       <li class="e-course-item">
         <div class="row">
           <div class="large-12 column">
@@ -50,8 +51,13 @@
             <p class="e-course-application">APPLICATION DUE: {{ course.date }}</p>
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
+              {% set person = name | returnPerson %}
                 <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ name | slug }}.jpg');">
-                  <p>{{ name }}</p>
+                  {% if person %}
+                  <p>{{person.name.first}} {{person.name.last}}</p>
+                  {% else %}
+                  <p>{{name}}</p>
+                  {% endif %}
                 </div>
               {% endfor %}
             </div>
@@ -68,101 +74,56 @@
           </div>
         </div>
       </li>
+      {% endif %}
     {% endfor %}
-
-    <li class="e-course-item">
-      <div class="row">
-        <div class="large-12 column">
-          <h2 class="e-course-title">Tech Innovation in Procurement</h2>
-        </div>
-        <div class="large-6 column">
-          
-          <p class="e-course-application">APPLICATION DUE: MAY 23, 2016</p>
-          <div class="e-course-faculty-team">
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/clay-johnson.jpg');">
-              <p>Clay Johnson</p>
-            </div>
-          </div>
-        </div>
-        <div class="large-6 column">
-          <p class="e-course-description">The way government purchases, especially information technology, is profoundly broken. Government should not be spending as much to make a website as it invests in scientific research to map the human brain. Contracts should not get awarded to the same enterprise over and over again but attract more and more diverse competitors.</p>
-          <a href="#" class="b-button">more info</a>
-        </div>
-      </div>
-    </li>
-
-    <li class="e-course-item">
-      <div class="row">
-        <div class="large-12 column">
-          <h2 class="e-course-title">Tech Innovation in Procurement</h2>
-        </div>
-        <div class="large-6 column">
-          <p class="e-course-application">APPLICATION DUE: MAY 23, 2016</p>
-          <div class="e-course-faculty-team">
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/clay-johnson.jpg');">
-              <p>Clay Johnson</p>
-            </div>
-          </div>
-        </div>
-        <div class="large-6 column">
-          <p class="e-course-description">The way government purchases, especially information technology, is profoundly broken. Government should not be spending as much to make a website as it invests in scientific research to map the human brain. Contracts should not get awarded to the same enterprise over and over again but attract more and more diverse competitors.</p>
-          <a href="#" class="b-button">more info</a>
-        </div>
-      </div>
-    </li>
   </ul>
   <div class="b-divider">
     <div class="row">
       <div class="large-12 column">
-        <h3>Past courses</h3>
+        <h3>Workshops offered by partner organizations</h3>
       </div>
     </div>
   </div>
   <ul class="b-course-list m-past-courses">
-    <li class="e-course-item">
-      <div class="row">
-        <div class="large-6 column">
-          <h2 class="e-course-title">Coaching Program for Data Driven Criminal Justice Projects</h2>
-          <p class="e-course-application">APPLICATION DUE: MAY 23, 2016</p>
-          <div class="e-course-faculty-team">
-            <div class="e-course-faculty column large-3" style="background-image: url('./img/faculty/stefaan-verhulst.jpg');">
-              <p>Stefaan Verhulst</p>
-            </div>
-            <div class="e-course-faculty column large-3" style="background-image: url('./img/faculty/beth-simone-noveck.jpg');">
-              <p>Beth Simone Noveck</p>
-            </div>
-            <div class="e-course-faculty column large-3" style="background-image: url('./img/faculty/ana-tovar.jpg');">
-              <p>Ana Tovar</p>
-            </div>
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/alan-kantrow.jpg');">
-              <p>Alan Kantrow</p>
+    {% for course in workshops %}
+      {% if course.is_crosslisted %}
+      <li class="e-course-item">
+        <div class="row">
+          <div class="large-12 column">
+            <h2 class="e-course-title">{{ course.name }}</h2>
+          </div>
+          <div class="large-6 column">
+            <p class="e-course-application">APPLICATION DUE: {{ course.date }}</p>
+            <div class="e-course-faculty-team row column">
+              {% for name in course.faculty_members %}
+              {% set person = name | returnPerson %}
+                {% if person %}
+                 <a href="{{person.id}}-{{person.name.slug}}.html">
+                  <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ person.name.slug }}.jpg');">
+                  <p>{{person.name.first}} {{person.name.last}}</p>
+                {% else %}
+                  <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ person.name.slug  }}.jpg');">
+                    <p>{{name}}</p>
+                {% endif %}
+                </div>
+                </a>
+              {% endfor %}
             </div>
           </div>
-        </div>
-        <div class="large-6 column">
-          <p class="e-course-description">The way government purchases, especially information technology, is profoundly broken. Government should not be spending as much to make a website as it invests in scientific research to map the human brain. Contracts should not get awarded to the same enterprise over and over again but attract more and more diverse competitors.</p>
-          <a href="#" class="b-button">more info</a>
-        </div>
-      </div>
-    </li>
-
-    <li class="e-course-item">
-      <div class="row">
-        <div class="large-6 column">
-          <h2 class="e-course-title">Tech Innovation in Procurement</h2>
-          <p class="e-course-application">APPLICATION DUE: MAY 23, 2016</p>
-          <div class="e-course-faculty-team">
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/clay-johnson.jpg');">
-              <p>Clay Johnson</p>
-            </div>
+          <div class="large-6 column">
+            <p class="e-course-description">{{course.description_short | safe}}</p>
+            <!-- COURSE LINKS FOR WORKSHOPS -->
+            {% if course.actions %}
+              {% for action in course.actions %}
+                <a class="b-button" href="{{action.link}}">{{action.label}}</a>
+              {% endfor %}
+            {% endif %}
+            <!-- END COURSE LINKS FOR WORKSHOP -->
           </div>
         </div>
-        <div class="large-6 column">
-          <p class="e-course-description">The way government purchases, especially information technology, is profoundly broken. Government should not be spending as much to make a website as it invests in scientific research to map the human brain. Contracts should not get awarded to the same enterprise over and over again but attract more and more diverse competitors.</p>
-          <a href="#" class="b-button">more info</a>
-        </div>
-      </div>
-    </li>
+      </li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </div>
 {% endblock %}

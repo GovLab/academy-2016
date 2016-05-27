@@ -102,7 +102,7 @@
 - name:
     last: Nisbet
     first: Miriam
-    slug: mirian-nisbet
+    slug: miriam-nisbet
   title: Miriam Nisbet
   job: Former Director of the Office of Government Information Services
   is_govlab: false
@@ -439,7 +439,7 @@
     last: Hermosilla
     first: María
     slug: maria-hermosilla
-  title: María Hermosilla
+  title: Maria Hermosilla #temp solution - got rid of diacritic to render page through vinyl
   job: Research Fellow
   description: >
     <p>Research Fellow Maria Hermosilla focuses her work on governance innovation in Latin America. At the GovLab, she does both research and project design and management.</p>

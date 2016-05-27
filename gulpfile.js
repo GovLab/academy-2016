@@ -45,7 +45,7 @@ var options = {
 
 // converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
 function slugify(t) {
-  return t ? t.toString().toLowerCase()
+  return t ? Diacritic.clean(t.toString().toLowerCase())
   .replace(/\s+/g, '-')
   .replace(/[^\w\-]+/g, '')
   .replace(/\-\-+/g, '-')
@@ -54,12 +54,10 @@ function slugify(t) {
   : false ;
 }
 
-// set up nunjucks environment
-function nunjucksEnv(env) {
-  env.addFilter('slug', slugify);
-}
 
-// define custom functions ///////////////////////////////////
+
+
+
 
 // converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
 function slugify(t) {
@@ -72,9 +70,62 @@ function slugify(t) {
   : false ;
 }
 
+
+// define custom functions ///////////////////////////////////
+function returnPerson(p) {
+  var person;
+  var peopleJSON = require('./source/data/people.json');
+  for (var i = 0; i < peopleJSON.data.length; i++) {
+    var fullName = peopleJSON.data[i].name.first + " " + peopleJSON.data[i].name.last;
+    if (fullName === p) {
+      person = peopleJSON.data[i];
+    } 
+  }
+  return person;
+}
+
+function sortJsonDescByDate(d) {
+  var data = [];
+  d.forEach(function(value, idx) {
+    if (value) {
+      data.push(d[idx]);
+    } else {
+      console.log(d[idx] + " is not found");
+    } 
+  });
+  var sortedData = data.sort(function(a,b) {
+    return new Date(b.date.start) - new Date(a.date.start);
+  });
+  return sortedData;
+}
+
+function sortJsonAscByDate(d) {
+  var data = [];
+  d.forEach(function(value, idx) {
+    data.push(d[idx]);
+  });
+  var sortedData = data.sort(function(a,b) {
+    return new Date(a.date.start) - new Date(b.date.start);
+  });
+  return sortedData;
+}
+
+function isOutdated(d) {
+  var today = new Date();
+  if (today > new Date(d)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 // set up nunjucks environment
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
+  env.addFilter('returnPerson', returnPerson);
+  env.addFilter("sortJsonDescByDate", sortJsonDescByDate);
+  env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
+  env.addFilter("isOutdated", isOutdated);
 }
 
 // compile all the datasets into a composite set

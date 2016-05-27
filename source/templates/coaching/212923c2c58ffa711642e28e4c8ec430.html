@@ -81,19 +81,22 @@
   </div>
   <div class="b-faculty-members">
     <div class="row expanded collapse">
-      
       {# This should be a macro?? #} 
       {# NEED TO COLOR CODE FACULTY #}
       {% for name in faculty_members %}
-        <div class="large-3 column b-faculty-card m-govlab end">
-          <div class="e-card-picture" style="background-image: url(./img/faculty/{{ name | slug}}.jpg);"></div>
-          <h1 class="e-card-name ">{{ name }}</h1>
-          <p class="e-card-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero esse sunt placeat commodi nobis doloremque accusantium voluptatem eius quidem, magni. Eius aspernatur quasi id aliquid cupiditate, ea dolor, odio tempora.</p>
-          <div class="b-button e-more-info">Go to profile</div>
-        </div>
+      {% set person = name | returnPerson %}
+        {% if person %}
+          <div class="large-3 column b-faculty-card {% if person.is_govlab %}m-govlab {% endif%} end">
+            <div class="e-card-picture" style="background-image: url(./img/faculty/{{ person.name.slug }}.jpg);"></div>
+            <h1 class="e-card-name ">{{ person.name.first}} {{person.name.last }}</h1>
+            <p class="e-card-description">{{ person.description | truncate() }}</p>
+            <a href="{{person.id}}-{{person.name.slug}}.html"><div class="b-button e-more-info">Go to profile</div></a>
+          </div>
+        {% else %}
+        <p>{{name}}</p>
+        {% endif %}
       {% endfor %}
       {# end of macro?? #}
-
     </div>
   </div>
 </div>
