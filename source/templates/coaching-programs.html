@@ -84,13 +84,15 @@
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
               {% set person = name | returnPerson %}
-                <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ name | slug }}.jpg');">
-                  {% if person %}
+                {% if person %}
+                 <a href="{{person.id}}-{{person.name.slug}}.html">
+                  <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ person.name.slug }}.jpg');">
                   <p>{{person.name.first}} {{person.name.last}}</p>
-                  {% else %}
-                  <p>{{name}}</p>
-                  {% endif %}
-                </div>
+                {% else %}
+                  <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ person.name.slug  }}.jpg');">
+                    <p>{{name}}</p>
+                {% endif %}
+                  </div>
               {% endfor %}
             </div>
           </div>
