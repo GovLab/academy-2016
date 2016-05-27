@@ -66,6 +66,43 @@ function returnPerson(p) {
   return person;
 }
 
+function sortJsonDescByDate(d) {
+  var data = [];
+  d.forEach(function(value, idx) {
+    if (value) {
+      data.push(d[idx]);
+    } else {
+      console.log(d[idx] + " is not found");
+    } 
+  });
+  var sortedData = data.sort(function(a,b) {
+    return new Date(b.date.start) - new Date(a.date.start);
+  });
+  return sortedData;
+}
+
+function sortJsonAscByDate(d) {
+  var data = [];
+  d.forEach(function(value, idx) {
+    data.push(d[idx]);
+  });
+  var sortedData = data.sort(function(a,b) {
+    return new Date(a.date.start) - new Date(b.date.start);
+  });
+  return sortedData;
+}
+
+function isOutdated(d) {
+  var today = new Date();
+  if (today > new Date(d)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
+
 // define custom functions ///////////////////////////////////
 
 // converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
@@ -83,6 +120,9 @@ function slugify(t) {
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
   env.addFilter('returnPerson', returnPerson);
+  env.addFilter("isOutdated", isOutdated);
+  env.addFilter("sortJsonDescByDate", sortJsonDescByDate);
+  env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
 }
 
 // compile all the datasets into a composite set
