@@ -45,7 +45,7 @@ var options = {
 
 // converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
 function slugify(t) {
-  return t ? t.toString().toLowerCase()
+  return t ? Diacritic.clean(t.toString().toLowerCase())
   .replace(/\s+/g, '-')
   .replace(/[^\w\-]+/g, '')
   .replace(/\-\-+/g, '-')
