@@ -54,6 +54,24 @@ function slugify(t) {
   : false ;
 }
 
+
+
+
+
+
+// converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
+function slugify(t) {
+  return t ? t.toString().toLowerCase()
+  .replace(/\s+/g, '-')
+  .replace(/[^\w\-]+/g, '')
+  .replace(/\-\-+/g, '-')
+  .replace(/^-+/, '')
+  .replace(/-+$/, '')
+  : false ;
+}
+
+
+// define custom functions ///////////////////////////////////
 function returnPerson(p) {
   var person;
   var peopleJSON = require('./source/data/people.json');
@@ -101,28 +119,13 @@ function isOutdated(d) {
   }
 }
 
-
-
-// define custom functions ///////////////////////////////////
-
-// converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
-function slugify(t) {
-  return t ? t.toString().toLowerCase()
-  .replace(/\s+/g, '-')
-  .replace(/[^\w\-]+/g, '')
-  .replace(/\-\-+/g, '-')
-  .replace(/^-+/, '')
-  .replace(/-+$/, '')
-  : false ;
-}
-
 // set up nunjucks environment
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
   env.addFilter('returnPerson', returnPerson);
-  env.addFilter("isOutdated", isOutdated);
   env.addFilter("sortJsonDescByDate", sortJsonDescByDate);
   env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
+  env.addFilter("isOutdated", isOutdated);
 }
 
 // compile all the datasets into a composite set
