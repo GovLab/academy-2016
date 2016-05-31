@@ -85,26 +85,14 @@ function returnPerson(p) {
 }
 
 function sortJsonDescByDate(d) {
-  var data = [];
-  d.forEach(function(value, idx) {
-    if (value) {
-      data.push(d[idx]);
-    } else {
-      console.log(d[idx] + " is not found");
-    } 
-  });
-  var sortedData = data.sort(function(a,b) {
+  var sortedData = d.sort(function(a,b) {
     return new Date(b.date.start) - new Date(a.date.start);
   });
   return sortedData;
 }
 
 function sortJsonAscByDate(d) {
-  var data = [];
-  d.forEach(function(value, idx) {
-    data.push(d[idx]);
-  });
-  var sortedData = data.sort(function(a,b) {
+  var sortedData = d.sort(function(a,b) {
     return new Date(a.date.start) - new Date(b.date.start);
   });
   return sortedData;
@@ -370,6 +358,12 @@ gulp.task('nunjucks', function() {
 
   return gulp.src('source/templates/**/*.+(html|nunjucks)')
   .pipe(plumber())
+  .pipe(plumber({
+        errorHandler: function (err) {
+            console.log(err);
+            this.emit('end');
+        }
+    }))
   // Adding data to Nunjucks
   .pipe(data(function() {
     return require('./source/data/data.json')
