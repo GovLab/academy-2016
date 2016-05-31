@@ -345,6 +345,28 @@ gulp.task('default', ['bs', 'build'], function (){
 
 // CLAUDIOS' ORIGINAL GULP
 
+// Nunjucks
+gulp.task('nunjucksDesign', function() {
+
+  var options = {
+    path: 'source/templates',
+    ext: '.html'
+  };
+  // nunjucksRender.nunjucks.configure(['source/templates/']);
+
+  return gulp.src('source/templates/**/*.+(html|nunjucks)')
+  .pipe(plumber())
+  // Adding data to Nunjucks
+  .pipe(data(function() {
+    return require('./source/data/data.json')
+  }))
+  .pipe(nunjucksRender(options))
+  .pipe(gulp.dest('public'))
+  .pipe(browserSync.reload({
+    stream: true
+  }))
+});
+
 gulp.task('browserSyncDesign', function() {
   browserSync({
     server: {
