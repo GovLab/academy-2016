@@ -111,14 +111,27 @@ function getLatestCourses(data) {
   for (var i = 0; i < 3; i++) {
     latestCourses.push(sortedCourses[i]);
   }
-  // console.log(latestCourses);
   return sortJsonAscByDate(latestCourses);
+}
+
+function contains(arr, v) {
+  return arr.indexOf(v) > -1;
+}
+
+function getCourses(name) {
+  var courseData = require('./source/data/coaching.json');
+  var courses = [];
+  for (var i = 0; i < courseData.data.length; i++) {
+    if (courseData.data[i].faculty_members.indexOf(name) > -1) {
+      courses.push(courseData.data[i]);
+    }
+  }
+  return sortJsonDescByDate(courses);
 }
 
 
 
 // DEV TASKS
-
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
   env.addFilter('returnPerson', returnPerson);
@@ -126,6 +139,8 @@ function nunjucksEnv(env) {
   env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
   env.addFilter("isOutdated", isOutdated);
   env.addFilter("getLatestCourses", getLatestCourses);
+  env.addFilter("contains",contains);
+  env.addFilter("getCourses", getCourses);
 }
 
 
