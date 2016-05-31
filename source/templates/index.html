@@ -19,8 +19,8 @@
       </div>
       <div class="large-4 column">
         <div class="row expanded">
-          <div class="large-12 column b-small-banner m-canvas">Canvas</div>   
-          <div class="large-12 column b-small-banner m-noi">Community</div>   
+          <a href="http://canvas.govlabacademy.org/"><div class="large-12 column b-small-banner m-canvas">Canvas</div></a>   
+          <a href="https://networkofinnovators.org/" target="_blank"><div class="large-12 column b-small-banner m-noi">Community</div></a>
         </div>
       </div>
     </div>
@@ -37,91 +37,177 @@
 
 <section class="b-upcoming-courses">
   <div class="row expanded">
+  {% set latestCourses = coaching | getLatestCourses %}
+  {% for course in latestCourses %}
     <div class="e-item m-coaching large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
+      <div class="e-date">{{course.date.start}}</div>
+        <h3>{{course.name}}</h3>
+        <p>{{course.description_short | safe | truncate(150)}}</p>
+        <a href="{{course.id}}.html" class="b-button">Learn more</a>
     </div>
-    <div class="e-item m-masters large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
-    </div>
-    <div class="e-item m-coaching large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
 <div class="b-divider">
   <div class="row">
     <div class="large-12 column">
-      <h2>Subscribe to Digest</h2>
-      <p>Pull the code from WWW</p>
+      <div>
+          <h4><strong>Subscribe</strong>
+          The GovLab Digest</h4>
+          <p>A weekly curation of new findings and developments on innovation in governance</p>
+      </div>
+      <form method="post" action="//thegovlab.us6.list-manage.com/subscribe/post?u=1a990feb5c&amp;id=d90a01c7ff" target="_blank" >
+          <div style="position: absolute; left: -5000px;"><input type="text" name="b_1a990feb5c_d90a01c7ff" tabindex="-1" value=""></div>
+
+          <input type="email" name="EMAIL" placeholder="Email">
+          <button type="submit">Subscribe</button>
+      </form>
     </div>
   </div>
 </div>
 
-<div class="b-slider">
-  <section id="slide-id" class="b-slide m-purple">
+<!-- NEW SLIDER -->
+<div class="govlab-digest e-banner-container">
+  <div class="b-slider slick">
+  <!-- ARTICLE 1 -->
+    <section id="slide-id" class="b-slide m-purple">
+      <header>
+        <h4>The GovLab Digest</h4>
+      </header>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <h2 class="e-project-name js-article-1-title"></h2>
+          <h3 class="js-article-1-author"></h3>
+        </div>
+        <div class="column medium-6">
+          <p class="js-article-1-content"></p>
+        </div>
+      </div>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked" href="http://thegovlab.org/category/govlab-digest/">Read the Digest<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked js-article-1-link" href='#'>Find out more<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ARTICLE 2 -->
+    <section id="slide-id" class="b-slide">
+      <header>
+        <h4>The GovLab Digest</h4>
+      </header>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <h2 class="e-project-name js-article-2-title"></h2>
+          <h3 class="js-article-2-author"></h3>
+        </div>
+        <div class="column medium-6">
+          <p class="js-article-2-content"></p>
+        </div>
+      </div>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked" href="http://thegovlab.org/category/govlab-digest/">Read the Digest<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked js-article-2-link" href='#'>Find out more<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ARTICLE 3 -->
+    <section id="slide-id" class="b-slide m-teal">
+      <header>
+        <h4>The GovLab Digest</h4>
+      </header>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <h2 class="e-project-name js-article-3-title"></h2>
+          <h3 class="js-article-3-author"></h3>
+        </div>
+        <div class="column medium-6">
+          <p class="js-article-3-content"></p>
+        </div>
+      </div>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked" href="http://thegovlab.org/category/govlab-digest/">Read the Digest<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked js-article-3-link" href='#'>Find out more<i class="material-icons">arrow_forward</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ARTICLE 4 -->
+    <section id="slide-id" class="b-slide m-orange">
     <header>
-        <h4>From the Blog</h4>
+      <h4>The GovLab Digest</h4>
     </header>
     <div class="row e-content">
-        <div class="medium-6 column">
-            <h2 class="e-project-name">Project Title</h2>
-            <h3 class="e-question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, enim adipisci dicta.</h3>
-        </div>
-        <div class="medium-6 column">
-            <p>Project description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint recusandae nostrum eos saepe officia vero illum fuga quae at, corporis unde quas sit adipisci neque doloremque fugiat possimus nisi minima.</p>
-            <p>Project description Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Sint recusandae nostrum eos saepe officia vero illum fuga quae at, corporis unde quas sit adipisci neque doloremque fugiat possimus nisi minima.</p>
-        </div>
+      <div class="column medium-6">
+        <h2 class="e-project-name js-article-4-title"></h2>
+        <h3 class="js-article-4-author"></h3>
+      </div>
+      <div class="column medium-6">
+        <p class="js-article-4-content"></p>
+      </div>
     </div>
     <div class="row e-content">
-        <div class="medium-6 column">
-            <div class="e-action">
-                <a class="b-button m-naked" href="./projects.html">All Projects<i class="material-icons">arrow_forward</i></a>
-            </div>
+      <div class="column medium-6">
+        <div class="e-action">
+          <a class="b-button m-naked" href="http://thegovlab.org/category/govlab-digest/">Read the Digest<i class="material-icons">arrow_forward</i></a>
         </div>
-        <div class="medium-6 column">
-            <div class="e-action">
-                <a class="b-button m-naked" href="#">Find out more<i class="material-icons">arrow_forward</i></a>
-            </div>
+      </div>
+      <div class="column medium-6">
+        <div class="e-action">
+          <a class="b-button m-naked js-article-4-link" href='#'>Find out more<i class="material-icons">arrow_forward</i></a>
         </div>
+      </div>
     </div>
-  </section>
-  <section id="slide-id" class="b-slide m-blue">
-    <header>
-        <h4>From the Blog</h4>
-    </header>
-    <div class="row e-content">
-        <div class="medium-6 column">
-            <h2 class="e-project-name">Project Title</h2>
-            <h3 class="e-question">Lorem ipsum dolor sit amet, consectetur adipisicing elit, enim adipisci dicta.</h3>
+    </section>
+    <!-- ARTICLE 5 -->
+    <section id="slide-id" class="b-slide m-blue">
+      <header>
+        <h4>The GovLab Digest</h4>
+      </header>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <h2 class="e-project-name js-article-5-title"></h2>
+          <h3 class="js-article-5-author"></h3>
         </div>
-        <div class="medium-6 column">
-            <p>Project description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint recusandae nostrum eos saepe officia vero illum fuga quae at, corporis unde quas sit adipisci neque doloremque fugiat possimus nisi minima.</p>
-            <p>Project description Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit. Sint recusandae nostrum eos saepe officia vero illum fuga quae at, corporis unde quas sit adipisci neque doloremque fugiat possimus nisi minima.</p>
+        <div class="column medium-6">
+          <p class="js-article-5-content"></p>
         </div>
-    </div>
-    <div class="row e-content">
-        <div class="medium-6 column">
-            <div class="e-action">
-                <a class="b-button m-naked" href="./projects.html">All Projects<i class="material-icons">arrow_forward</i></a>
-            </div>
+      </div>
+      <div class="row e-content">
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked" href="http://thegovlab.org/category/govlab-digest/">Read the Digest<i class="material-icons">arrow_forward</i></a>
+          </div>
         </div>
-        <div class="medium-6 column">
-            <div class="e-action">
-                <a class="b-button m-naked" href="#">Find out more<i class="material-icons">arrow_forward</i></a>
-            </div>
+        <div class="column medium-6">
+          <div class="e-action">
+            <a class="b-button m-naked js-article-5-link" href='#'>Find out more<i class="material-icons">arrow_forward</i></a>
+          </div>
         </div>
-    </div>
-  </section>
+      </div>
+    </section>
+  </div>
 </div>
+
+<!-- END NEW SLIDER -->
 
 {% endblock %}
