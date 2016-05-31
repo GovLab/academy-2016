@@ -1,10 +1,12 @@
 var
 gulp            = require('gulp'),
+util            = require('gulp-util'),
 sass            = require('gulp-sass'),
 shell           = require('gulp-shell'),
 data            = require('gulp-data'),
 nunjucksRender  = require('gulp-nunjucks-render'),
 browserSync     = require('browser-sync'),
+bs              = require('browser-sync').create(),
 file            = require('gulp-file'),
 plumber         = require('gulp-plumber'),
 yaml            = require('gulp-yaml'),
@@ -17,6 +19,8 @@ fs              = require('fs'),
 flatten         = require('gulp-flatten'),
 Diacritic       = require('diacritic'),
 packagejson     = require('./package.json');
+
+
 
 
 // define options & configuration ///////////////////////////////////
@@ -41,6 +45,17 @@ var options = {
   defaultData: './source/data/default.json' // default dataset to use if no automatically generated template is found
 };
 
+// initialize browsersync
+gulp.task('bs', function() {
+  if (!cliOptions.nosync) {
+    bs.init({
+      server: 'public',
+      open: false
+    });
+  }
+});
+
+// DENNYS CUSTOM FUNCTIONS
 // define custom functions ///////////////////////////////////
 
 // converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
@@ -53,23 +68,6 @@ function slugify(t) {
   .replace(/-+$/, '')
   : false ;
 }
-
-
-
-
-
-
-// converts string t to a slug (eg 'Some Text Here' becomes 'some-text-here')
-function slugify(t) {
-  return t ? t.toString().toLowerCase()
-  .replace(/\s+/g, '-')
-  .replace(/[^\w\-]+/g, '')
-  .replace(/\-\-+/g, '-')
-  .replace(/^-+/, '')
-  .replace(/-+$/, '')
-  : false ;
-}
-
 
 // define custom functions ///////////////////////////////////
 function returnPerson(p) {
@@ -117,7 +115,10 @@ function getLatestCourses(data) {
   return sortJsonAscByDate(latestCourses);
 }
 
-// set up nunjucks environment
+
+
+// DEV TASKS
+
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
   env.addFilter('returnPerson', returnPerson);
@@ -126,6 +127,7 @@ function nunjucksEnv(env) {
   env.addFilter("isOutdated", isOutdated);
   env.addFilter("getLatestCourses", getLatestCourses);
 }
+
 
 // compile all the datasets into a composite set
 // for injection into nunjucks using gulp-data
@@ -217,6 +219,41 @@ function generateVinyl(basePath, dataPath, fPrefix, fSuffix, dSuffix) {
   return require('stream').Readable({ objectMode: true }).wrap(es.readArray(files));
 }
 
+// define gulp tasks ///////////////////////////////////
+gulp.task('sass', function() {
+  return gulp.src('source/sass/styles.scss')
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('public/css'))
+  .pipe(cliOptions.nosync ? bs.stream() : util.noop());
+});
+
+gulp.task('libCss', function() {
+  return gulp.src(options.libraryPath + 'css/**/*')
+  .pipe(plumber())
+  .pipe(gulp.dest('source/css/lib'))
+  .pipe(gulp.dest('public/css/lib'));
+});
+
+gulp.task('libJs', function() {
+  return gulp.src(options.libraryPath + 'js/**/*')
+  .pipe(plumber())
+  .pipe(gulp.dest('source/js/lib'));
+});
+
+gulp.task('js', ['libJs'], function() {
+  return gulp.src('source/js/**/*')
+  .pipe(plumber())
+  .pipe(gulp.dest('public/js'))
+  .pipe(cliOptions.nosync ? bs.stream() : util.noop());
+});
+
+gulp.task('img', function() {
+  return gulp.src('source/img/**/*')
+  .pipe(plumber())
+  .pipe(gulp.dest('public/img'))
+  .pipe(cliOptions.nosync ? bs.stream() : util.noop());
+});
+
 gulp.task('yaml', function () {
   return gulp.src('source/data/**/*.+(yaml|yml)')
   .pipe(yaml())
@@ -258,9 +295,7 @@ gulp.task('generateTemplates', ['json'], function() {
   .pipe(gulp.dest(options.path))
 });
 
-
-// RENAMED "GENERATE" from nunjucks so vinyl is only generated when we are building"
-gulp.task('generate', ['generateTemplates'], function() {
+gulp.task('nunjucks', ['generateTemplates'], function() {
   return gulp.src( options.path + '**/*' + options.ext )
   .pipe(plumber())
   .pipe(data(function(file) {
@@ -290,76 +325,28 @@ gulp.task('generate', ['generateTemplates'], function() {
   .pipe(gulp.dest('public'));
 });
 
-gulp.task('yaml', function () {
-  return gulp.src('source/data/**/*.+(yaml|yml)')
-  .pipe(yaml())
-  .pipe(gulp.dest('source/data'));
-});
-
-gulp.task('json', ['yaml'], function() {
-  return gulp.src('source/data/**/*.json')
-  .pipe(intercept(function(file) {
-    var o = JSON.parse(file.contents.toString()),
-    b = {};
-    if (!o.hasOwnProperty('data')) {
-        // wrap json in a top level property 'data'
-        b.data = o;
-        // assign a unique id to each entry in data
-        for (var j in b.data) {
-          if (!b.data[j].hasOwnProperty('id')) {
-            if (b.data[j].hasOwnProperty('title')) {
-              // use title to create hash if exists,
-              b.data[j].id = md5(b.data[j].title);
-              // otherwise use first prop
-            } else {
-              b.data[j].id = md5(b.data[j][Object.keys(b.data[j])[0]]);
-            }
-          }
-        }
-        if (cliOptions.verbose) {
-          util.log(util.colors.magenta('Converting yaml ' + file.path), 'to json as', util.colors.blue(JSON.stringify(b)));
-        }
-        file.contents = new Buffer(JSON.stringify(b));
-      }
-      return file;
-    }))
-  .pipe(gulp.dest('source/data'));
-});
-
-
-
-gulp.task('browserSync', function() {
-  browserSync({
-    server: {
-      baseDir: 'public' // This is the DIST folder browsersync will serve
-    },
-    open: false
-  })
+var buildTasks = ['sass', 'js', 'img', 'nunjucks', 'libCss'];
+gulp.task('build', buildTasks, function () {
+  util.log(util.colors.magenta('****'), 'Running build tasks:', buildTasks, util.colors.magenta('****'));
 })
 
-gulp.task('sass', function() {
-  return gulp.src('source/sass/styles.scss')  // sass entry point
-  .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest('public/css'))
-  .pipe(browserSync.stream());
+gulp.task('deploy', ['build'], shell.task([
+  'git subtree push --prefix public origin gh-pages'
+  ])
+);
+
+gulp.task('default', ['bs', 'build'], function (){
+  gulp.watch('source/sass/**/*.scss', ['sass']);
+  gulp.watch('source/templates/**/*.html', ['nunjucks']);
+  gulp.watch('source/img/**/*', ['img']);
+  gulp.watch('source/js/**/*', ['js']);
 });
 
-gulp.task('img', function() {
-  return gulp.src('source/img/**/*')
-  .pipe(plumber())
-  .pipe(gulp.dest('public/img'))
-  .pipe(browserSync.stream());
-});
 
-gulp.task('js', function() {
-  return gulp.src(['node_modules/govlab-styleguide/js/**/*', 'source/js/**/*'])
-  .pipe(plumber())
-  .pipe(gulp.dest('public/js'))
-  .pipe(browserSync.stream());
-});
+// CLAUDIOS' ORIGINAL GULP
 
 // Nunjucks
-gulp.task('nunjucks', function() {
+gulp.task('nunjucksDesign', function() {
 
   var options = {
     path: 'source/templates',
@@ -369,12 +356,6 @@ gulp.task('nunjucks', function() {
 
   return gulp.src('source/templates/**/*.+(html|nunjucks)')
   .pipe(plumber())
-  .pipe(plumber({
-        errorHandler: function (err) {
-            console.log(err);
-            this.emit('end');
-        }
-    }))
   // Adding data to Nunjucks
   .pipe(data(function() {
     return require('./source/data/data.json')
@@ -386,25 +367,43 @@ gulp.task('nunjucks', function() {
   }))
 });
 
-gulp.task('deploy', ['sass', 'nunjucks', 'js', 'img'], shell.task([
-  'git subtree push --prefix public origin gh-pages'
-  ])
-);
+gulp.task('browserSyncDesign', function() {
+  browserSync({
+    server: {
+      baseDir: 'public' // This is the DIST folder browsersync will serve
+    },
+    open: false
+  })
+})
+
+gulp.task('sassDesign', function() {
+  return gulp.src('source/sass/styles.scss')  // sass entry point
+  .pipe(sass().on('error', sass.logError))
+  .pipe(gulp.dest('public/css'))
+  .pipe(browserSync.stream());
+});
+
+gulp.task('imgDesign', function() {
+  return gulp.src('source/img/**/*')
+  .pipe(plumber())
+  .pipe(gulp.dest('public/img'))
+  .pipe(browserSync.stream());
+});
+
+gulp.task('jsDesign', function() {
+  return gulp.src(['node_modules/govlab-styleguide/js/**/*', 'source/js/**/*'])
+  .pipe(plumber())
+  .pipe(gulp.dest('public/js'))
+  .pipe(browserSync.stream());
+});
+
 
 // Claudio's Design Task
-gulp.task('design', ['browserSync', 'sass', 'nunjucks', 'js', 'img'], function (){
-  gulp.watch('source/sass/**/*.scss', ['sass']);
-  gulp.watch('source/templates/**/*.html', ['nunjucks']);
-  gulp.watch('source/img/**/*', ['img']);
-  gulp.watch('source/js/**/*', ['js']);
+gulp.task('design', ['browserSyncDesign', 'sassDesign', 'nunjucksDesign', 'jsDesign', 'imgDesign'], function (){
+  gulp.watch('source/sass/**/*.scss', ['sassDesign']);
+  gulp.watch('source/templates/**/*.html', ['nunjucksDesign']);
+  gulp.watch('source/img/**/*', ['imgDesign']);
+  gulp.watch('source/js/**/*', ['jsDesign']);
 });
 
 
-// Default Task for generating the site
-// Added generate task to separate vinyl task from design task
-gulp.task('default', ['browserSync', 'sass', 'generate', 'nunjucks', 'js', 'img'], function (){
-  gulp.watch('source/sass/**/*.scss', ['sass']);
-  gulp.watch('source/templates/**/*.html', ['nunjucks']);
-  gulp.watch('source/img/**/*', ['img']);
-  gulp.watch('source/js/**/*', ['js']);
-});
