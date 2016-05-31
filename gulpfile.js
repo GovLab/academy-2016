@@ -107,6 +107,16 @@ function isOutdated(d) {
   }
 }
 
+function getLatestCourses(data) {
+  var latestCourses = [];
+  var sortedCourses = sortJsonDescByDate(data);
+  for (var i = 0; i < 3; i++) {
+    latestCourses.push(sortedCourses[i]);
+  }
+  // console.log(latestCourses);
+  return sortJsonAscByDate(latestCourses);
+}
+
 // set up nunjucks environment
 function nunjucksEnv(env) {
   env.addFilter('slug', slugify);
@@ -114,6 +124,7 @@ function nunjucksEnv(env) {
   env.addFilter("sortJsonDescByDate", sortJsonDescByDate);
   env.addFilter("sortJsonAscByDate", sortJsonAscByDate);
   env.addFilter("isOutdated", isOutdated);
+  env.addFilter("getLatestCourses", getLatestCourses);
 }
 
 // compile all the datasets into a composite set

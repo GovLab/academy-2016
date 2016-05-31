@@ -37,24 +37,15 @@
 
 <section class="b-upcoming-courses">
   <div class="row expanded">
+  {% set latestCourses = coaching | getLatestCourses %}
+  {% for course in latestCourses %}
     <div class="e-item m-coaching large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
+      <div class="e-date">{{course.date.start}}</div>
+        <h3>{{course.name}}</h3>
+        <p>{{course.description_short | safe | truncate(150)}}</p>
+        <a href="{{course.id}}.html" class="b-button">Learn more</a>
     </div>
-    <div class="e-item m-masters large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
-    </div>
-    <div class="e-item m-coaching large-4 column">
-      <div class="e-date">JUNE 6, 2016</div>
-        <h3>Tech Innovation in Procurement</h3>
-        <p>Bringing innovation to the government supply chain is about promising and delivering on greater productivity and improved workflows.</p>
-        <a href="#" class="b-button">Learn more</a>
-    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -217,7 +208,6 @@
         </div>
       </div>
     </section>
-
   </div>
 </div>
 
