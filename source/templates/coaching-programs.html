@@ -71,7 +71,7 @@
     </div>
   </div>
   <ul class="b-course-list">
-    {% for course in coaching %}
+    {% for course in coaching | sortJsonAscByDate %}
       {% if course.is_active and not course.date.start | isOutdated %}
       <li class="e-course-item">
         <div class="row">
@@ -114,7 +114,7 @@
     </div>
   </div>
   <ul class="b-course-list m-past-courses">
-    {% for course in coaching %}
+    {% for course in coaching | sortJsonDescByDate %}
       {% if course.is_active and course.date.start | isOutdated %}
         <li class="e-course-item">
           <div class="row">

@@ -1,0 +1,8 @@
+{% for course in coaching | sortJsonAscByDate %}
+  <p>{{ course.name }} - {{ course.date.start }}</p>
+{% endfor%}
+
+<h1>Descending</h1>
+{% for course in coaching | sortJsonDescByDate %}
+  <p>{{ course.name }} - {{ course.date.start }}</p>
+{% endfor%}
