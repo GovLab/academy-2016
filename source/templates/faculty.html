@@ -1,0 +1,35 @@
+{% extends '_base.html' %}
+{% block main %}
+<div class="b-faculty-page">
+  <div class="b-top-section m-purple">
+    <div class="row">
+      <div class="large-12 column">
+        <h1>About</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-divider">
+    <div class="row">
+      <div class="large-12 column">
+        <h3>Meet the People</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="b-page-section">
+    <div class="row">
+      <div class="large-12-column">
+        {% for person in people %}
+          <a href="{{person.id}}-{{person.name.slug}}.html">
+            <h3>{{person.name.first}} {{person.name.last}}<h3>
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock %}
