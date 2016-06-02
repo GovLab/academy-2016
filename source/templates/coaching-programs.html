@@ -26,7 +26,8 @@
             <h2 class="e-course-title">{{course.name}}</h2>
           </div>
           <div class="large-6 column">
-            <p class="e-course-application">APPLICATION DUE: {{ course.date.application}}</p>
+            <p class="e-course-application">APPLICATION DUE: {{ course.date.application }}</p>
+            <p class="e-course-application">STARTS THE WEEK OF: {{ course.date.week_start }}</p>
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
               {% set person = name | returnPerson %}
@@ -66,7 +67,7 @@
           <div class="row">
             <div class="large-6 column">
               <h2 class="e-course-title">{{ course.name }}</h2>
-              <p class="e-course-application">APPLICATION DUE: {{ course.date.application }}</p>
+              <p class="e-course-application">STARTED THE WEEK OF: {{ course.date.week_start }}</p>
               <div class="e-course-faculty-team">
               {% for name in course.faculty_members %}
                 {% set person = name | returnPerson %}
