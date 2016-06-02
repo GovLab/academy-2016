@@ -54,21 +54,25 @@
   <div class="b-page-section">
     <div class="row">
       <div class="large-9 column large-centered">
-        <div class="row e-course-description">
-          <div class="large-6 column">
-            {{description_long | safe}}
-          </div>
-          
-          <div class="large-6 column">
-            <p><strong>Course Format:</strong>{{format}}</p>
-            <div class="b-format">
-            {% if when %}
-              <p>Online sessions will be held <strong>{{when}}</strong></p>
-              {% if when_plus %}<p><em>{{when_plus}}</em></p>{% endif %}
-            {% endif %}
-            <p><strong>Course Duration:</strong> {{duration}}</p>
-          </div>
-        </div>
+        {{description_long | safe}}
+      </div>
+    </div>
+  </div>
+  <div class="b-divider">
+    <div class="row">
+      <div class="large-12 column"><h2>Course Format</h2></div>
+    </div>
+  </div>
+  <div class="b-page-section">
+    <div class="row">
+      <div class="large-9 column large-centered">
+        <p><strong>Course Format:</strong>{{format}}</p>
+        <div class="b-format">
+        {% if when %}
+          <p>Online sessions will be held <strong>{{when}}</strong></p>
+          {% if when_plus %}<p><em>{{when_plus}}</em></p>{% endif %}
+        {% endif %}
+        <p><strong>Course Duration:</strong> {{duration}}</p>
       </div>
     </div>
   </div>
@@ -81,22 +85,20 @@
   </div>
   <div class="b-faculty-members">
     <div class="row expanded collapse">
-      {# This should be a macro?? #} 
-      {# NEED TO COLOR CODE FACULTY #}
       {% for name in faculty_members %}
       {% set person = name | returnPerson %}
         {% if person %}
+          <a href="{{person.id}}-{{person.name.slug}}.html" target="_blank">
           <div class="large-3 column b-faculty-card {% if person.is_govlab %}m-govlab {% endif%} end">
             <div class="e-card-picture" style="background-image: url(./img/faculty/{{ person.name.slug }}.jpg);"></div>
             <h1 class="e-card-name ">{{ person.name.first}} {{person.name.last }}</h1>
-            <p class="e-card-description">{{ person.description | truncate() }}</p>
-            <a href="{{person.id}}-{{person.name.slug}}.html"><div class="b-button e-more-info">Go to profile</div></a>
+            <p class="e-card-description">{{ person.job }}</p>
           </div>
+          </a>
         {% else %}
         <p>{{name}}</p>
         {% endif %}
       {% endfor %}
-      {# end of macro?? #}
     </div>
   </div>
 </div>
