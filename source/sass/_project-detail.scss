@@ -1,30 +1,5 @@
 // PROJECT DETAIL PAGE
-// .b-project-detail-page {
-//     .project-photo-slider {
-//         .b-project-slider {
-//             border: 1px solid $gray-15;
-//             .m-white {
-//                 background-color: $white;
-//             }
-//             .slider-img {
-//                 max-height: 400px;
-//                 text-align: center;
-//                 margin: 0 auto;
-//             }
-//         }
-//         .b-project-slider .slick-arrow:before, .b-slider .slick-arrow:after {
-//             color: $gray-15;
-//             font-size: 60px;
-//             transition: all .4s ease;
-//         }
-//     }
-// }
-
-.b-single-description {
-    background-color: $gray-80;
-    padding: 50px 0 40px;
-    position: relative;
-
+.b-project-detail-page {
     .e-tags {
         list-style-type: none;
         padding-left: 0;
@@ -58,41 +33,32 @@
         }
     }
 
-
-    h2 {
-        margin: 0;
-        font-weight: 600;
-        font-size: 22px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-    h2,
-    .e-description,
-    .e-description a { color: $white; }
-
-    .e-description a { text-decoration: underline;}
-
-
-    .e-wrap {
-        @include wrap;
-    }
     .e-social-media {
-        padding: 20px 0;
+            padding: 20px 0;
 
-        a {
-            color: $purple;
-            font-size: 22px;
-            line-height: 16px;
-            display: inline-block;
-            padding: 10px;
-            @include transition;
-
-            &:hover {
+            a {
                 color: $purple;
+                font-size: 22px;
+                line-height: 16px;
+                display: inline-block;
+                padding: 10px;
                 @include transition;
+
+                &:hover {
+                    color: $purple;
+                    @include transition;
+                }
             }
         }
-    }
+
+
+}
+
+.b-single-description {
+    background-color: $gray-80;
+    padding: 50px 0 40px;
+    position: relative;
+
 
     &.m-slider {
         .material-icons {
