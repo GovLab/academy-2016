@@ -33,7 +33,7 @@
           </div>
           <div class="large-6 column">
             
-            <p class="e-course-application">APPLICATION DUE: {{ course.date.application}}</p>
+            <p class="e-course-application">{{ course.date.application}}</p>
             <div class="e-course-faculty-team row column">
               {% for name in course.faculty_members %}
               {% set person = name | returnPerson %}
@@ -58,6 +58,10 @@
               {% endfor %}
             {% endif %}
           </div>
+          <!-- PARTNER -->
+          {% if course.partner %}
+            <h5 class="e-partner">Partner: {{course.partner}}</h5>
+          {% endif %}
         </div>
       </li>
       {% endif %}
@@ -77,7 +81,7 @@
         <div class="row">
           <div class="large-6 column">
             <h2 class="e-course-title">{{course.name}}</h2>
-            <p class="e-course-application">APPLICATION DUE: {{course.date.application}}</p>
+            <p class="e-course-application">{{course.date.application}}</p>
             <div class="e-course-faculty-team">
               {% for name in course.faculty_members %}
               {% set person = name | returnPerson %}
@@ -102,6 +106,10 @@
               {% endfor %}
             {% endif %}
           </div>
+          <!-- PARTNER -->
+          {% if course.partner %}
+            <h5 class="e-partner">Partner: {{course.partner}}</h5>
+          {% endif %}
         </div>
       </li>
       {% endif %} 
