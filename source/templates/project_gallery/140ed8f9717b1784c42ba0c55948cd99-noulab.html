@@ -3,119 +3,123 @@
 
 {% block main %}
 
-<section class="b-main-content">
-    <header class="b-top-section m-blue">
-        <section class="b-single-landing">
-            <div class="row">
-                <div class="large-12 column">
-                    <h2 class="e-project-name">{{title}}</h2>
-                    <h3 class="e-question">{{tagline}}</h3>
-                </div>
-            </div>
-            <div class="e-wrap row">
-                <div class="e-half">
-                </div>
-                <div class="e-half">
-                </div>
-                <div class="e-progress m-{{status}}">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </section>
-    </header>
+<div class="b-project-detail-page">
 
 
-    <section class="b-single-description">
-        <div class="e-wrap row">
-            <div class="e-content column large-6">
-                {% if background %}
-                  <h4>Background</h4>
-                  {{background}}
-                    <br>
-                {% endif %}
-                {% if description %}
-                    <h4>Description</h4>
-                    {{description}}
-                    <br>
-                {% endif %}
-                {% if impact %}
-                      <h4>Impact</h4>
-                    {{impact}}
-                    <br>
-                {% endif %}
-            </div>
-
-            <div class="e-content large-6 column">
-                {% if location %}
-                <p class="e-place"><strong>Location:</strong> {{location}}</p>
-                {% endif %}
-                {% if www %}
-                <p><strong>Project Website:</strong> <a href="{{www}}" target="_blank" class="e-project-link">{{www}}</a></p>
-                {% endif %}
-                <div class="e-social-media">
-                    {% if twitter %}
-                    <a href="http://twitter.com/{{twitter | replace('@', '')}}" target="_blank" class=""><i class="fa fa-twitter"></i></a>
-                    {% endif %}
-                    {% if facebook %}
-                    <a href="{{facebook}}" target="_blank" class=""><i class="fa fa-facebook"></i></a>
-                    {% endif %}
-                    {% if email %}
-                    <a href="mailto:{{email}}" target="_blank" class=""><i class="fa fa-envelope"></i></a>
-                    {% endif %}
-                </div>
-                <div class="e-tags">
-                    <h5>Tags:</h5>
-                    {% for tag in tags %}
-                    <a href="./project-gallery.html#{{tag | slug | lower}}" class="e-tag">{{tag}}</a>
-                    {% endfor %}
-                </div>
-                {% if team %}
-                <div class="e-team">
-                    <h4>Team</h4>
-                    {% for person in team %}
-                        {% if person.url %}
-                            <p><a href="{{person.url}}" target="_blank">{{person.first_name}} {{person.last_name}}</a></p>
-                        {% else %}
-                            <p>{{person.first_name}} {{person.last_name}}</p>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                {% endif %}
-
-                {% if partners %}
-                <div class="e-team">
-                    <h4>Partners</h4>
-                    {% for partner in partners %}
-                            <p>{{partner}}</p>
-                    {% endfor %}
-                </div>
-                {% endif %}
-
-            </div>
-        </div>
-    </section>
-
-    <div class="b-page-section project-photo-slider">
-        {% if images %}
-        <div class="b-slider slick">
-            {% for image in images %}
-            <div id="slide-id" class="b-slide m-white">
-                <div class="row e-content">
-                    <img class="slider-img" src="./img/projects/{{image}}">
-                </div>
-            </div>
-            {% endfor %}
-        {% endif %}
-        </div>
-    </div>
-</section>
 
 
+
+  <div class="b-top-section m-blue">
+
+		<div class="row">
+		  <div class="large-12 column">
+				<h2 class="e-project-name">{{title}}</h2>
+				<h3 class="e-question">{{tagline}}</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-10 column">
+				<div class="e-progress m-{{status}}">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="b-page-section">
+		<div class="row">
+			<div class="large-12-column">
+				{% if background %}
+					<h4>Background</h4>
+					{{background}}
+				{% endif %}
+				{% if description %}
+					<h4>Description</h4>
+					{{description}}
+				{% endif %}
+				{% if impact %}
+					<h4>Impact</h4>
+					{{impact}}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	<div class="b-page-section">
+		<div class="row">
+			<div class="large-12-column">
+				{% if location %}
+				<p class="e-place"><strong>Location:</strong> {{location}}</p>
+				{% endif %}
+				{% if www %}
+				<p><strong>Project Website:</strong> <a href="{{www}}" target="_blank" class="e-project-link">{{www}}</a></p>
+				{% endif %}
+				<div class="e-social-media">
+					{% if twitter %}
+					<a href="http://twitter.com/{{twitter | replace('@', '')}}" target="_blank" class=""><i class="fa fa-twitter"></i></a>
+					{% endif %}
+					{% if facebook %}
+					<a href="{{facebook}}" target="_blank" class=""><i class="fa fa-facebook"></i></a>
+					{% endif %}
+					{% if email %}
+					<a href="mailto:{{email}}" target="_blank" class=""><i class="fa fa-envelope"></i></a>
+					{% endif %}
+				</div>
+				<div class="e-tags">
+					<h5>Tags:</h5>
+					{% for tag in tags %}
+					<a href="./project-gallery.html#{{tag | slug | lower}}" class="e-tag">{{tag}}</a>
+					{% endfor %}
+				</div>
+				{% if team %}
+				<div class="e-team">
+					<h4>Team</h4>
+					{% for person in team %}
+						{% if person.url %}
+							<p><a href="{{person.url}}" target="_blank">{{person.first_name}} {{person.last_name}}</a></p>
+						{% else %}
+							<p>{{person.first_name}} {{person.last_name}}</p>
+						{% endif %}
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				{% if partners %}
+				<div class="e-team">
+					<h4>Partners</h4>
+					{% for partner in partners %}
+						<p>{{partner}}</p>
+					{% endfor %}
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	</div>
+
+
+  <div class="b-photo-gallery">
+	  <div class="b-single-description {% if images %}m-slider{% endif %}">
+	    {% if images %}
+	    <div class="b-project-slider slick">
+	      {% for image in images %}
+	      <span><img class="e-project-image" src="./img/projects/{{image}}" alt=""></span>
+	      {% endfor %}
+	    </div>
+	    {% endif %}
+	  </div>
+  </div>
+
+</div>
+
+
+
+<script src="./js/project-detail-slider.js" type="text/javascript"></script>
 
 {% endblock %}
 
