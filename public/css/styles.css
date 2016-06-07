@@ -7566,3 +7566,23 @@ code.m-negative {
     padding: 0;
     background-size: 100%;
     background-position: center; }
+
+.b-page-section.m-sequence {
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 50px; }
+  .b-page-section.m-sequence:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 30px solid #fff;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    bottom: -30px;
+    left: calc(50% - 15px);
+    z-index: 10; }
+  .b-page-section.m-sequence:nth-of-type(odd) {
+    background-color: #f1f1f1; }
+    .b-page-section.m-sequence:nth-of-type(odd):after {
+      border-top-color: #f1f1f1; }
