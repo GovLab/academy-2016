@@ -4578,6 +4578,7 @@ Styleguide 1.2
   right: 0;
   z-index: 10;
   display: none;
+  background-color: red;
   opacity: .1; }
   #overlay.m-active {
     display: block; }
@@ -5971,8 +5972,6 @@ Markup:
 .m-purple - $purple background
 .m-teal - $teal background
 .m-orange - $orange background
-.m-purple-40k - $purple-40k background
-.m-blue-20k - $blue-20k background
 
 Styleguide 3.4
 */
@@ -6012,12 +6011,6 @@ Styleguide 3.4
 
 .b-divider.m-teal {
   background-color: #008895; }
-
-.b-divider.m-purple-40k {
-  background-color: #381759; }
-
-.b-divider.m-blue-20k {
-  background-color: #006e8f; }
 
 /*
 Slide
@@ -6335,11 +6328,7 @@ first loads.
 
 Markup:
 <!-- #fullwidth -->
-<div class="b-page-section">
-    <div class="row">
-        <p>This produces the sticky at the bottom of the window <i class="material-icons">arrow_downward</i></p>
-    </div>
-</div>
+<p>Check out the purple sticky at the bottom of the window <i class="material-icons">arrow_downward</i></p>
 <div class="b-sticky m-purple">
     <div class="row">
         <div class="column small-12">
@@ -6772,205 +6761,6 @@ Styleguide 3.7
   .e-card a:hover {
     text-decoration: none; }
 
-/*
-Firebase-Editable
-
-Coming Soon
-
-Styleguide 6.2
-*/
-/*
-Data Visualization
-
-Styleguide 6.3
-*/
-/*
-Bubble map
-
-Data driven bubble map via D3, loosely based on several examples from Mike Bostock <a href="http://bl.ocks.org/mbostock">http://bl.ocks.org/mbostock</a>
-
-Markup:
-<div class="b-map"></div>
-<!-- ----------------------------------------- -->
-<!-- ignore, just used to link to example page -->
-<a class="b-button" href="map1.html">Map I</a>
-<!-- ----------------------------------------- -->
-
-Styleguide 6.3.1
-*/
-.b-map .background {
-  fill: none;
-  pointer-events: all; }
-
-.b-map .feature {
-  fill: #ccc;
-  cursor: pointer; }
-  .b-map .feature.active {
-    fill: orange; }
-
-.b-map .country {
-  fill: none;
-  stroke: #fff;
-  stroke-linecap: round;
-  stroke-linejoin: round; }
-
-.b-map .node.fade circle {
-  opacity: .15;
-  transition: opacity 0.5s; }
-
-.b-map .node circle {
-  opacity: .75;
-  cursor: pointer;
-  transition: opacity 0.5s; }
-  .b-map .node circle.active {
-    opacity: .9;
-    fill: #008ab3 !important;
-    transition: opacity 0.1s; }
-
-.b-map .node text {
-  fill: #fff;
-  cursor: pointer; }
-
-.b-map .region {
-  fill: #ddd;
-  cursor: pointer;
-  transition: fill 0.1s; }
-  .b-map .region.active {
-    fill: #bbb;
-    transition: fill 0.1s; }
-
-/*
-Packlayout map
-
-D3 based bubble map that uses packlayout to nest collections of bubbles into region bounding boxes.
-
-Markup:
-<div class="b-pack-map"></div>
-<!-- ----------------------------------------- -->
-<!-- ignore, just used to link to example page -->
-<a class="b-button" href="map2.html">Map II</a>
-<!-- ----------------------------------------- -->
-
-Styleguide 6.3.2
-*/
-.b-pack-map .background {
-  fill: none;
-  pointer-events: all; }
-
-.b-pack-map .feature {
-  fill: #ccc;
-  cursor: pointer; }
-  .b-pack-map .feature.active {
-    fill: orange; }
-
-.b-pack-map .country {
-  fill: none;
-  stroke-linecap: round;
-  stroke-linejoin: round; }
-
-.b-pack-map .parent.fade circle {
-  opacity: .15;
-  transition: opacity 0.2s; }
-
-.b-pack-map .parent circle {
-  opacity: .6;
-  cursor: pointer;
-  transition: opacity 0.2s; }
-  .b-pack-map .parent circle.active {
-    opacity: 1;
-    transition: opacity 0.2s; }
-
-.b-pack-map .parent.sector circle {
-  opacity: .5; }
-
-.b-pack-map .parent text {
-  font-size: 22px; }
-
-.b-pack-map .parent.invisible text {
-  visibility: hidden; }
-
-.b-pack-map .parent.invisible circle {
-  opacity: 0;
-  visibility: visible; }
-
-.b-pack-map .parent.invisible.sector circle {
-  opacity: .2; }
-
-.b-pack-map .node.fade circle {
-  opacity: .15;
-  transition: opacity 0.5s; }
-
-.b-pack-map .node circle {
-  opacity: 1;
-  cursor: pointer;
-  transition: opacity 0.2s; }
-  .b-pack-map .node circle.active {
-    opacity: 1;
-    transition: opacity 0.2s; }
-
-.b-pack-map .node text {
-  font-size: 26px; }
-  .b-pack-map .node text.sector-text {
-    font-size: 16px; }
-
-.b-pack-map .node.study {
-  display: none; }
-  .b-pack-map .node.study.fade circle {
-    opacity: .8;
-    transition: opacity 0.5s; }
-    .b-pack-map .node.study.fade circle.active {
-      opacity: 1;
-      transition: opacity 0.2s; }
-  .b-pack-map .node.study text {
-    fill: rgba(0, 0, 0, 0.6);
-    font-size: 16px; }
-  .b-pack-map .node.study.show {
-    display: initial; }
-
-.b-pack-map .region {
-  fill: #ddd;
-  cursor: pointer;
-  transition: fill 0.2s; }
-  .b-pack-map .region.active {
-    fill: #bbb;
-    transition: fill 0.2s; }
-
-.b-pack-map text {
-  fill: #fff;
-  cursor: pointer; }
-
-.b-pack-map .parent {
-  opacity: 0;
-  visibility: hidden; }
-  .b-pack-map .parent.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s; }
-
-.b-pack-map .node {
-  opacity: 0;
-  visibility: hidden; }
-  .b-pack-map .node.show {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 0.5s; }
-
-.map-ui .b-button, .map-ui .b-form input[type="submit"], .b-form .map-ui input[type="submit"] {
-  color: #fff;
-  background-color: rgba(0, 138, 179, 0.4); }
-  .map-ui .b-button.m-active, .map-ui .b-form input.m-active[type="submit"], .b-form .map-ui input.m-active[type="submit"] {
-    background-color: #008ab3; }
-
-.tooltip {
-  color: white;
-  font-size: 16px;
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.02s;
-  width: 200px; }
-  .tooltip::before {
-    border-bottom-color: rgba(0, 0, 0, 0.5); }
-
 .kss-title:hover, .kss-title *:hover {
   text-decoration: none; }
 
@@ -7115,8 +6905,57 @@ code.m-negative {
   .sandbox {
     background-color: blue; } }
 
+@media screen and (min-width: 64.0625em) {
+  input::-webkit-input-placeholder {
+    text-align: left;
+    color: white; }
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    text-align: left;
+    color: white; }
+  input::-moz-placeholder {
+    /* Firefox 19+ */
+    text-align: left;
+    color: white; }
+  input:-ms-input-placeholder {
+    text-align: left;
+    color: white; } }
+
+.u-align-right {
+  text-align: right; }
+
+.u-align-left {
+  text-align: left; }
+
+.u-align-center {
+  text-align: center; }
+
+.b-subscribe {
+  background-color: #00616b;
+  padding: 35px 0;
+  color: white; }
+  .b-subscribe .e-intro {
+    text-align: center;
+    margin-bottom: 30px; }
+    .b-subscribe .e-intro h4 {
+      text-transform: uppercase;
+      font-weight: 100; }
+  .b-subscribe form {
+    display: flex;
+    margin-bottom: 20px; }
+  .b-subscribe input {
+    background-color: rgba(255, 255, 255, 0.1);
+    flex: 1;
+    margin: 0;
+    padding: 20px; }
+    .b-subscribe input:focus {
+      background-color: rgba(255, 255, 255, 0.2); }
+  .b-subscribe button {
+    padding: 5px 20px;
+    background-color: rgba(255, 255, 255, 0.3); }
+
 .b-highlights {
-  padding: 0; }
+  padding: 65px 0 0 !important; }
   .b-highlights .b-slide {
     padding: 140px 0; }
 
@@ -7139,9 +6978,9 @@ code.m-negative {
   .b-main-categories .e-item.m-coaching {
     background-color: #008895; }
   .b-main-categories .e-item.m-masters {
-    background-color: #008ab3; }
-  .b-main-categories .e-item.m-workshop {
     background-color: #ad0054; }
+  .b-main-categories .e-item.m-workshop {
+    background-color: #008ab3; }
 
 .b-upcoming-courses .e-item {
   padding: 50px;
@@ -7155,12 +6994,18 @@ code.m-negative {
   .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
     background-color: #008895; }
   .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
-    background-color: #ad0054; }
-  .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
     background-color: #008ab3; }
+  .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
+    background-color: #ad0054; }
 
 .b-course-list {
   margin: 0; }
+  .b-course-list .b-top-section, .b-course-list .b-highlights, .b-course-list .b-course-header, .b-course-list .b-faculty-header {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; }
+    .b-course-list .b-top-section h3, .b-course-list .b-highlights h3, .b-course-list .b-course-header h3, .b-course-list .b-faculty-header h3 {
+      font-weight: 400; }
   .b-course-list .e-course-item {
     padding: 30px 0 0;
     list-style-type: none; }
@@ -7555,6 +7400,39 @@ code.m-negative {
 .b-divider {
   text-align: center; }
 
+.b-top-nav.m-alpha {
+  background-blend-mode: multiply;
+  background-color: rgba(51, 51, 51, 0.5); }
+
+.alpha-nav .b-top-section, .alpha-nav .b-highlights, .alpha-nav .b-course-header, .alpha-nav .b-faculty-header {
+  padding-top: 140px;
+  margin-top: -65px; }
+
+.b-small-banner {
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 15%; }
+  .b-small-banner.m-canvas {
+    background-image: url("../img/canvas.jpg"); }
+  .b-small-banner.m-noi {
+    background-image: url("../img/community.jpg"); }
+
+.b-course-list.m-coaching .b-divider {
+  background-color: #00717c; }
+
+.b-course-list.m-workshop .b-divider {
+  background-color: #940048; }
+
+.b-course-list.m-masters .b-divider {
+  background-color: #00769a; }
+
+.b-course-list.m-clinics .b-divider {
+  background-color: #afaf35; }
+
 .b-faculty-header {
   text-align: center; }
   .b-faculty-header .e-faculty-picture {
@@ -7569,8 +7447,9 @@ code.m-negative {
 
 .b-page-section.m-sequence {
   position: relative;
-  padding-top: 70px;
-  padding-bottom: 50px; }
+  padding-top: 0;
+  padding-bottom: 0;
+  display: flex; }
   .b-page-section.m-sequence:after {
     position: absolute;
     content: "";
@@ -7586,3 +7465,19 @@ code.m-negative {
     background-color: #f1f1f1; }
     .b-page-section.m-sequence:nth-of-type(odd):after {
       border-top-color: #f1f1f1; }
+  .b-page-section.m-sequence .e-content {
+    padding: 40px;
+    flex: 1; }
+  .b-page-section.m-sequence .e-sequence-image {
+    width: 33.3%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply; }
+  .b-page-section.m-sequence.m-coaching .e-sequence-image {
+    background-color: #008895; }
+  .b-page-section.m-sequence.m-master .e-sequence-image {
+    background-color: #008ab3; }
+  .b-page-section.m-sequence.m-clinics .e-sequence-image {
+    background-color: #c2c33b; }
+  .b-page-section.m-sequence.m-workshop .e-sequence-image {
+    background-color: #ad0054; }
