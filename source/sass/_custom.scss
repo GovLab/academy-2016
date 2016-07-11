@@ -6,22 +6,50 @@
   .b-course-detail.m-coaching &,
   .b-course-list.m-coaching &   { background-color: $coaching-color; }
   .b-course-detail.m-masters  &,
-  .b-course-list.m-masters  &   { background-color: $workshop-color; }
+  .b-course-list.m-masters  &   { background-color: $masters-color; }
   .b-course-detail.m-workshop &,
-  .b-course-list.m-workshop &   { background-color: $masters-color; }
+  .b-course-list.m-workshop &   { background-color: $workshop-color; }
 }
 
 // Things to send to the styleguide
 
-.b-divider {
-    text-align: center; // let's port this to styleguide
+.b-divider { text-align: center; }// let's port this to styleguide
+
+
+.b-top-nav.m-alpha { // let's port this to styleguide
+  background-blend-mode: multiply;
+  background-color: rgba($black, .5);
 }
 
-// .b-top-nav.m-alpha { // let's port this to styleguide
-//   background-color: rgba($black, .1) !important;
-//   position: relative;
-// }
+.alpha-nav {
+  .b-top-section {
+    padding-top: 140px;
+    margin-top: -65px;
+  }
+}
 
+
+
+.b-small-banner {
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: multiply;
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 15%;
+  
+  &.m-canvas { background-image: url("../img/canvas.jpg"); }
+  &.m-noi { background-image: url("../img/community.jpg"); }
+} 
+
+// Custom Colors
+.b-course-list {
+  &.m-coaching .b-divider { background-color: darken($coaching-color, 5); }
+  &.m-workshop .b-divider { background-color: darken($workshop-color, 5); }
+  &.m-masters .b-divider { background-color: darken($masters-color, 5); }
+  &.m-clinics .b-divider { background-color: darken($clinics-color, 5); }
+}
 
 
 // Faculty Page Styles
@@ -44,10 +72,9 @@
 .b-page-section {
   &.m-sequence {
     position: relative;
-    padding-top: 70px;
-    padding-bottom: 50px;
-
-    
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
 
     &:after {
       position: absolute;
@@ -65,5 +92,23 @@
     &:nth-of-type(odd) { background-color: #f1f1f1; 
       &:after { border-top-color: #f1f1f1; }
     }
+
+    .e-content {
+      padding: 40px;
+      flex: 1;
+    }
+
+    .e-sequence-image {
+      width: 33.3%;
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: multiply;
+    }
+
+    &.m-coaching .e-sequence-image { background-color: $coaching-color; }
+    &.m-master .e-sequence-image { background-color: $masters-color; }
+    &.m-clinics .e-sequence-image { background-color: $clinics-color; }
+    &.m-workshop .e-sequence-image { background-color: $workshop-color; }
+
   }
 }
