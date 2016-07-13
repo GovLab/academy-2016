@@ -53,14 +53,15 @@
       {% endif %}
     {% endfor %}
   </ul>
-  <div class="b-divider m-dark-teal">
-    <div class="row">
-      <div class="large-12 column">
-        <h3>Past courses</h3>
+<section class="expandable">
+    <div class="b-divider m-dark-teal b-expand-trigger">
+      <div class="row">
+        <div class="large-12 column">
+          <h3 class='e-expandable-title'>Past Courses<i class='material-icons e-expandable-icon'>expand_more</i></h3>
+        </div>
       </div>
     </div>
-  </div>
-  <ul class="b-course-list m-past-courses">
+  <ul class="b-course-list m-past-courses m-active m-expandable-element">
     {% for course in coaching | sortJsonDescByDate %}
       {% if course.is_active and course.date.start | isOutdated %}
         <li class="e-course-item">
@@ -93,6 +94,7 @@
       {% endif %}
     {% endfor %}
   </ul>
+</section>
 
   <div class="b-divider">
     <div class="row">

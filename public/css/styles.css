@@ -7607,6 +7607,13 @@ code.m-negative {
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(51, 51, 51, 0.1); }
 
+.expandable .m-active {
+  display: none; }
+
+.expandable .b-expand-trigger i {
+  float: right;
+  vertical-align: -7px; }
+
 .b-course-detail.m-clinics .b-top-section, .b-course-detail.m-clinics .b-highlights, .b-course-detail.m-clinics .b-course-header, .b-course-detail.m-clinics .b-faculty-header,
 .b-course-list.m-clinics .b-top-section,
 .b-course-list.m-clinics .b-highlights,
