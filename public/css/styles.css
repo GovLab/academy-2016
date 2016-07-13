@@ -6439,35 +6439,35 @@ Markup:
 
 Styleguide 5.2
 */
-.b-top-section, .b-highlights, .b-course-header, .b-faculty-header {
+.b-top-section, .b-highlights, .b-course-header, .breadcrumbs, .b-faculty-header {
   background-color: #333;
   color: rgba(255, 255, 255, 0.8);
   padding-top: 70px;
   padding-bottom: 30px; }
-  .b-top-section h2, .b-highlights h2, .b-course-header h2, .b-faculty-header h2 {
+  .b-top-section h2, .b-highlights h2, .b-course-header h2, .breadcrumbs h2, .b-faculty-header h2 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 100;
     font-size: 30px;
     margin-top: 0; }
-  .b-top-section h3, .b-highlights h3, .b-course-header h3, .b-faculty-header h3 {
+  .b-top-section h3, .b-highlights h3, .b-course-header h3, .breadcrumbs h3, .b-faculty-header h3 {
     text-align: center;
     margin-bottom: 30px;
     text-transform: none;
     font-size: 22px;
     font-weight: 100; }
 
-.b-top-section.m-orange, .m-orange.b-highlights, .m-orange.b-course-header, .m-orange.b-faculty-header {
+.b-top-section.m-orange, .m-orange.b-highlights, .m-orange.b-course-header, .m-orange.breadcrumbs, .m-orange.b-faculty-header {
   background-color: #ee5b43; }
 
-.b-top-section.m-purple, .m-purple.b-highlights, .m-purple.b-course-header, .m-purple.b-faculty-header {
+.b-top-section.m-purple, .m-purple.b-highlights, .m-purple.b-course-header, .m-purple.breadcrumbs, .m-purple.b-faculty-header {
   background-color: #523080; }
 
-.b-top-section.m-blue, .m-blue.b-highlights, .m-blue.b-course-header, .m-blue.b-faculty-header {
+.b-top-section.m-blue, .m-blue.b-highlights, .m-blue.b-course-header, .m-blue.breadcrumbs, .m-blue.b-faculty-header {
   background-color: #008ab3; }
 
-.b-top-section.m-teal, .m-teal.b-highlights, .m-teal.b-course-header, .m-teal.b-faculty-header {
+.b-top-section.m-teal, .m-teal.b-highlights, .m-teal.b-course-header, .m-teal.breadcrumbs, .m-teal.b-faculty-header {
   background-color: #008895; }
 
 /*
@@ -7210,11 +7210,11 @@ code.m-negative {
 
 .b-course-list {
   margin: 0; }
-  .b-course-list .b-top-section, .b-course-list .b-highlights, .b-course-list .b-course-header, .b-course-list .b-faculty-header {
+  .b-course-list .b-top-section, .b-course-list .b-highlights, .b-course-list .b-course-header, .b-course-list .breadcrumbs, .b-course-list .b-faculty-header {
     background-size: cover;
     background-position: center;
     background-blend-mode: multiply; }
-    .b-course-list .b-top-section h3, .b-course-list .b-highlights h3, .b-course-list .b-course-header h3, .b-course-list .b-faculty-header h3 {
+    .b-course-list .b-top-section h3, .b-course-list .b-highlights h3, .b-course-list .b-course-header h3, .b-course-list .breadcrumbs h3, .b-course-list .b-faculty-header h3 {
       font-weight: 400; }
   .b-course-list .e-course-item {
     padding: 30px 0 0;
@@ -7618,31 +7618,45 @@ code.m-negative {
   float: right;
   vertical-align: -7px; }
 
-.b-course-detail.m-clinics .b-top-section, .b-course-detail.m-clinics .b-highlights, .b-course-detail.m-clinics .b-course-header, .b-course-detail.m-clinics .b-faculty-header,
+.breadcrumbs {
+  font-size: 1rem;
+  padding-top: 0 !important;
+  background-color: inherit; }
+  .breadcrumbs > * {
+    vertical-align: middle;
+    color: rgba(0, 0, 0, 0.4); }
+  .breadcrumbs a:hover {
+    color: white; }
+
+.b-course-detail.m-clinics .b-top-section, .b-course-detail.m-clinics .b-highlights, .b-course-detail.m-clinics .b-course-header, .b-course-detail.m-clinics .breadcrumbs, .b-course-detail.m-clinics .b-faculty-header,
 .b-course-list.m-clinics .b-top-section,
 .b-course-list.m-clinics .b-highlights,
 .b-course-list.m-clinics .b-course-header,
+.b-course-list.m-clinics .breadcrumbs,
 .b-course-list.m-clinics .b-faculty-header {
   background-color: #c2c33b; }
 
-.b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header, .b-course-detail.m-coaching .b-faculty-header,
+.b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header, .b-course-detail.m-coaching .breadcrumbs, .b-course-detail.m-coaching .b-faculty-header,
 .b-course-list.m-coaching .b-top-section,
 .b-course-list.m-coaching .b-highlights,
 .b-course-list.m-coaching .b-course-header,
+.b-course-list.m-coaching .breadcrumbs,
 .b-course-list.m-coaching .b-faculty-header {
   background-color: #008895; }
 
-.b-course-detail.m-masters .b-top-section, .b-course-detail.m-masters .b-highlights, .b-course-detail.m-masters .b-course-header, .b-course-detail.m-masters .b-faculty-header,
+.b-course-detail.m-masters .b-top-section, .b-course-detail.m-masters .b-highlights, .b-course-detail.m-masters .b-course-header, .b-course-detail.m-masters .breadcrumbs, .b-course-detail.m-masters .b-faculty-header,
 .b-course-list.m-masters .b-top-section,
 .b-course-list.m-masters .b-highlights,
 .b-course-list.m-masters .b-course-header,
+.b-course-list.m-masters .breadcrumbs,
 .b-course-list.m-masters .b-faculty-header {
   background-color: #008ab3; }
 
-.b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header, .b-course-detail.m-workshop .b-faculty-header,
+.b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header, .b-course-detail.m-workshop .breadcrumbs, .b-course-detail.m-workshop .b-faculty-header,
 .b-course-list.m-workshop .b-top-section,
 .b-course-list.m-workshop .b-highlights,
 .b-course-list.m-workshop .b-course-header,
+.b-course-list.m-workshop .breadcrumbs,
 .b-course-list.m-workshop .b-faculty-header {
   background-color: #ad0054; }
 
@@ -7653,7 +7667,7 @@ code.m-negative {
   background-blend-mode: multiply;
   background-color: rgba(51, 51, 51, 0.5); }
 
-.alpha-nav .b-top-section, .alpha-nav .b-highlights, .alpha-nav .b-course-header, .alpha-nav .b-faculty-header {
+.alpha-nav .b-top-section, .alpha-nav .b-highlights, .alpha-nav .b-course-header, .alpha-nav .breadcrumbs, .alpha-nav .b-faculty-header {
   padding-top: 140px;
   margin-top: -65px; }
 
