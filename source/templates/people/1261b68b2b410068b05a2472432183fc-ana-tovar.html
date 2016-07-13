@@ -21,15 +21,16 @@
     </div>
   </div>
   {# The sections below will only be rendered if the faculty has classes listed #}
+  {% set fullname = name.first + " " + name.last %}
+  {% set courses = fullname | getCourses %}
+  {% if not courses | length == 0 %}
   <div class="b-divider">
     <div class="row">
       <div class="large-12 column"><h2>Courses</h2></div>
     </div>
   </div>
+  {% for course in courses %}
   <ul class="b-course-list">
-    {% set fullname = name.first + " " + name.last %}
-    {% set courses = fullname | getCourses %}
-    {% for course in courses %}
     <li class="e-course-item">
       <div class="row">
         <div class="large-12 column">
@@ -52,6 +53,6 @@
     </li>
     {% endfor %}
   </ul>
-  
+  {% endif %}
 </div>
 {% endblock %}

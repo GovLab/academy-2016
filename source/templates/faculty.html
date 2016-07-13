@@ -9,27 +9,28 @@
     </div>
   </div>
 
-  <div class="b-divider">
-    <div class="row">
-      <div class="large-12 column">
-        <h3>Meet the People</h3>
-      </div>
+
+{# List of Faculty#}
+  <div class="b-page-section b-faculty">
+    <div class="row expanded">
+      {% for p in people %}
+        <div class="column large-4 end e-list-item">
+          <a href="{{p.id}}-{{p.name.slug}}.html" target="_blank"><div class="e-picture" style="background-image: url('./img/faculty/{{p.name.slug }}.jpg');"></div>
+          <p class="e-name">{{p.title}}</p></a>
+          <p class="e-job">{{p.job}}</p>
+
+        </div>
+      {% endfor %}
     </div>
   </div>
-
-  <div class="b-page-section">
-    <div class="row">
-      <div class="large-12-column">
-        {% for person in people %}
-          <a href="{{person.id}}-{{person.name.slug}}.html">
-            <h3>{{person.name.first}} {{person.name.last}}<h3>
-          </a>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
 
 </div>
 
 {% endblock %}
+
+
+
+<!-- % if person %}
+<a href="{{person.id}}-{{person.name.slug}}.html" target="_blank">
+<div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{ person.name.slug }}.jpg');">
+<p>{{person.name.first}} {{person.name.last}}</p> -->
