@@ -7607,6 +7607,10 @@ code.m-negative {
   border-radius: 50%;
   box-shadow: 0 0 8px rgba(51, 51, 51, 0.1); }
 
+.b-faculty-detail .b-faculty-header .b-social-media-icon {
+  padding: 10px;
+  font-size: 18px; }
+
 .expandable .m-active {
   display: none; }
 
