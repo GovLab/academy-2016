@@ -7,6 +7,23 @@
         <div class="e-faculty-picture" style="background-image:url(./img/faculty/{{ name.slug }}.jpg"></div>
         <h2>{{name.first}} {{name.last}}</h2>
         <h3 class="e-tagline">{{name.job}}</h3>
+          <div class="e-extras">
+            {% if link.url %}
+              <a href="{{ link.url }}" class="b-social-media-icon m-url" id="faculty-url" target="_blank"><i class="fa fa-link"></i></a>
+            {% endif %}
+            {% if link.twitter %}
+              <a href="{{ link.twitter }}" class="b-social-media-icon m-twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+            {% if link.linkedin %}
+              <a href="{{ link.linkedin }}" class="b-social-media-icon m-linkedin" id="faculty-linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+            {% if link.github %}
+              <a href="{{ link.github }}" class="b-social-media-icon m-github" id="faculty-github" target="_blank"><i class="fa fa-github"></i></a>
+            {% endif %}
+            {% if link.email%}
+              <a href="mailto:{{ link.email }}" class="b-social-media-icon m-email" id="faculty-email"><i class="fa fa-envelope"></i></a>
+            {% endif %}
+          </div>
       </div>
     </div>
   </div>
