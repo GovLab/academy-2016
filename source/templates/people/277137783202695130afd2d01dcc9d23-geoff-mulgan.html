@@ -22,7 +22,7 @@
   </div>
   {# The sections below will only be rendered if the faculty has classes listed #}
   {% set fullname = name.first + " " + name.last %}
-  {% set courses = fullname | getCourses %}
+  {% set courses = fullname | getCourses %}    
   {% if not courses | length == 0 %}
   <div class="b-divider">
     <div class="row">
@@ -40,9 +40,12 @@
           
           <p class="e-course-application">APPLICATION DUE: {{ course.date.application }}</p>
           <div class="e-course-faculty-team">
-            <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{name.slug}}.jpg');">
-              <p>{{name.first}} {{name.last}}</p>
-            </div>
+            {% for name in course.faculty_members %}
+            {% set person = name | returnPerson %}
+              <div class="e-course-faculty column large-3 end" style="background-image: url('./img/faculty/{{person.name.slug}}.jpg');">
+                <p>{{person.name.first}} {{person.name.last}}</p>
+              </div>
+            {% endfor %}
           </div>
         </div>
         <div class="large-6 column">
