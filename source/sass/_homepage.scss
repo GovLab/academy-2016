@@ -5,6 +5,7 @@
     .b-slide {
         padding: 140px 0;
     }
+    background-color: $orange;
 }
 
 .b-small-banner {
@@ -40,16 +41,16 @@
         &:nth-of-type(odd) { background-color: rgba($black, .05); }
 
         &.m-clinics {
-            .b-button { background-color: $clinics-color; }
+            .b-button { background-color: $orange; }
         }
         &.m-coaching { 
-            .b-button { background-color: $coaching-color; }
+            .b-button { background-color: $orange; }
         }
         &.m-masters  {
-            .b-button { background-color: $masters-color; }
+            .b-button { background-color: $orange; }
         }
         &.m-workshop { 
-            .b-button { background-color: $workshop-color; }
+            .b-button { background-color: $orange; }
         }
     }
 }
