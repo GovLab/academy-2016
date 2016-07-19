@@ -7115,6 +7115,24 @@ code.m-negative {
   .sandbox {
     background-color: blue; } }
 
+.b-button.m-orange, .b-form input.m-orange[type="submit"] {
+  background-color: #ee5b43; }
+
+.b-button.m-light-orange, .b-form input.m-light-orange[type="submit"] {
+  background-color: #f86b53; }
+
+.b-button.m-clinics, .b-form input.m-clinics[type="submit"] {
+  background-color: #f9b26f; }
+
+.b-button.m-coaching, .b-form input.m-coaching[type="submit"] {
+  background-color: #22a69b; }
+
+.b-button.m-masters, .b-form input.m-masters[type="submit"] {
+  background-color: #efce7c; }
+
+.b-button.m-workshop, .b-form input.m-workshop[type="submit"] {
+  background-color: #366473; }
+
 @media screen and (min-width: 64.0625em) {
   input::-webkit-input-placeholder {
     text-align: left;
@@ -7165,7 +7183,8 @@ code.m-negative {
     background-color: rgba(255, 255, 255, 0.3); }
 
 .b-highlights {
-  padding: 65px 0 0 !important; }
+  padding: 65px 0 0 !important;
+  background-color: #ee5b43; }
   .b-highlights .b-slide {
     padding: 140px 0; }
 
@@ -7174,7 +7193,7 @@ code.m-negative {
   .b-small-banner.m-canvas {
     background-color: #ee5b43; }
   .b-small-banner.m-noi {
-    background-color: #008ab3; }
+    background-color: #366473; }
 
 .b-main-categories .e-item {
   font-size: 1.4rem;
@@ -7184,13 +7203,13 @@ code.m-negative {
   padding: 50px 0;
   color: white; }
   .b-main-categories .e-item.m-clinics {
-    background-color: #c2c33b; }
+    background-color: #f9b26f; }
   .b-main-categories .e-item.m-coaching {
-    background-color: #008895; }
+    background-color: #22a69b; }
   .b-main-categories .e-item.m-masters {
-    background-color: #ad0054; }
+    background-color: #366473; }
   .b-main-categories .e-item.m-workshop {
-    background-color: #008ab3; }
+    background-color: #efce7c; }
 
 .b-upcoming-courses .e-item {
   padding: 50px;
@@ -7200,13 +7219,13 @@ code.m-negative {
   .b-upcoming-courses .e-item:nth-of-type(odd) {
     background-color: rgba(51, 51, 51, 0.05); }
   .b-upcoming-courses .e-item.m-clinics .b-button, .b-upcoming-courses .e-item.m-clinics .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-clinics input[type="submit"] {
-    background-color: #c2c33b; }
+    background-color: #ee5b43; }
   .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
-    background-color: #008895; }
+    background-color: #ee5b43; }
   .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
-    background-color: #008ab3; }
+    background-color: #ee5b43; }
   .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
-    background-color: #ad0054; }
+    background-color: #ee5b43; }
 
 .b-course-list {
   margin: 0; }
@@ -7634,7 +7653,7 @@ code.m-negative {
 .b-course-list.m-clinics .b-course-header,
 .b-course-list.m-clinics .breadcrumbs,
 .b-course-list.m-clinics .b-faculty-header {
-  background-color: #c2c33b; }
+  background-color: #f9b26f; }
 
 .b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header, .b-course-detail.m-coaching .breadcrumbs, .b-course-detail.m-coaching .b-faculty-header,
 .b-course-list.m-coaching .b-top-section,
@@ -7642,7 +7661,7 @@ code.m-negative {
 .b-course-list.m-coaching .b-course-header,
 .b-course-list.m-coaching .breadcrumbs,
 .b-course-list.m-coaching .b-faculty-header {
-  background-color: #008895; }
+  background-color: #22a69b; }
 
 .b-course-detail.m-masters .b-top-section, .b-course-detail.m-masters .b-highlights, .b-course-detail.m-masters .b-course-header, .b-course-detail.m-masters .breadcrumbs, .b-course-detail.m-masters .b-faculty-header,
 .b-course-list.m-masters .b-top-section,
@@ -7650,7 +7669,7 @@ code.m-negative {
 .b-course-list.m-masters .b-course-header,
 .b-course-list.m-masters .breadcrumbs,
 .b-course-list.m-masters .b-faculty-header {
-  background-color: #008ab3; }
+  background-color: #efce7c; }
 
 .b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header, .b-course-detail.m-workshop .breadcrumbs, .b-course-detail.m-workshop .b-faculty-header,
 .b-course-list.m-workshop .b-top-section,
@@ -7658,7 +7677,7 @@ code.m-negative {
 .b-course-list.m-workshop .b-course-header,
 .b-course-list.m-workshop .breadcrumbs,
 .b-course-list.m-workshop .b-faculty-header {
-  background-color: #ad0054; }
+  background-color: #366473; }
 
 .b-divider {
   text-align: center; }
@@ -7685,16 +7704,16 @@ code.m-negative {
     background-image: url("../img/community.jpg"); }
 
 .b-course-list.m-coaching .b-divider {
-  background-color: #00717c; }
+  background-color: #1e9187; }
 
 .b-course-list.m-workshop .b-divider {
-  background-color: #940048; }
+  background-color: #2e5562; }
 
 .b-course-list.m-masters .b-divider {
-  background-color: #00769a; }
+  background-color: #ecc665; }
 
 .b-course-list.m-clinics .b-divider {
-  background-color: #afaf35; }
+  background-color: #f8a557; }
 
 .b-faculty-header {
   text-align: center; }
@@ -7737,13 +7756,13 @@ code.m-negative {
     background-position: center;
     background-blend-mode: multiply; }
   .b-page-section.m-sequence.m-coaching .e-sequence-image {
-    background-color: #008895; }
-  .b-page-section.m-sequence.m-master .e-sequence-image {
-    background-color: #008ab3; }
+    background-color: #22a69b; }
+  .b-page-section.m-sequence.m-masters .e-sequence-image {
+    background-color: #efce7c; }
   .b-page-section.m-sequence.m-clinics .e-sequence-image {
-    background-color: #c2c33b; }
+    background-color: #f9b26f; }
   .b-page-section.m-sequence.m-workshop .e-sequence-image {
-    background-color: #ad0054; }
+    background-color: #366473; }
 
 .b-main-menu {
   overflow-x: auto; }
