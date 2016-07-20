@@ -5,13 +5,13 @@
     .b-slide {
         padding: 140px 0;
     }
-    background-color: $orange;
+    background-color: $primary;
 }
 
 .b-small-banner {
     height: 200px;
 
-    &.m-canvas { background-color: $orange; }
+    &.m-canvas { background-color: $primary; }
     &.m-noi { background-color: $blue; }
 }
 
@@ -32,11 +32,31 @@
 }
 
 .b-upcoming-courses {
+    @include breakpoint($desktop) {
+        display: flex;
+    }
+    @include breakpoint($mobile-only) {
+        display: inline;
+    }
     .e-item {
+        display: flex;
+        flex-direction: column;
         padding: 50px;
-        height: 350px;
+        height: 100%;
+        padding-bottom: 5rem;
+        flex-grow: 1;
+        .e-course_name {
+            flex-grow: 1;
+        }
+        .b-button { 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            color: $white;
+            position: absolute;
 
-        .b-button { color: $white; }
+            }
+
 
         &:nth-of-type(odd) { background-color: rgba($black, .05); }
 

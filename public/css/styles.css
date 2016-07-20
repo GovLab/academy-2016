@@ -7217,21 +7217,36 @@ code.m-negative {
   .b-main-categories .e-item.m-workshop {
     background-color: #f9b26f; }
 
-.b-upcoming-courses .e-item {
-  padding: 50px;
-  height: 350px; }
-  .b-upcoming-courses .e-item .b-button, .b-upcoming-courses .e-item .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item input[type="submit"] {
-    color: white; }
-  .b-upcoming-courses .e-item:nth-of-type(odd) {
-    background-color: rgba(51, 51, 51, 0.05); }
-  .b-upcoming-courses .e-item.m-clinics .b-button, .b-upcoming-courses .e-item.m-clinics .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-clinics input[type="submit"] {
-    background-color: #efce7c; }
-  .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
-    background-color: #22a69b; }
-  .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
-    background-color: #f9b26f; }
-  .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
-    background-color: #366473; }
+.b-upcoming-courses {
+  display: inline; }
+  @media screen and (min-width: 64.0625em) {
+    .b-upcoming-courses {
+      display: flex; } }
+  .b-upcoming-courses .e-item {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    height: 100%;
+    padding-bottom: 5rem;
+    flex-grow: 1; }
+    .b-upcoming-courses .e-item .e-course_name {
+      flex-grow: 1; }
+    .b-upcoming-courses .e-item .b-button, .b-upcoming-courses .e-item .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item input[type="submit"] {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: row;
+      color: white;
+      position: absolute; }
+    .b-upcoming-courses .e-item:nth-of-type(odd) {
+      background-color: rgba(51, 51, 51, 0.05); }
+    .b-upcoming-courses .e-item.m-clinics .b-button, .b-upcoming-courses .e-item.m-clinics .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-clinics input[type="submit"] {
+      background-color: #efce7c; }
+    .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
+      background-color: #22a69b; }
+    .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
+      background-color: #f9b26f; }
+    .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
+      background-color: #366473; }
 
 .b-course-list {
   margin: 0; }
