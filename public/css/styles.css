@@ -7639,9 +7639,13 @@ code.m-negative {
 .expandable .m-active {
   display: none; }
 
-.expandable .b-expand-trigger i {
-  float: right;
-  vertical-align: -7px; }
+.expandable .b-expand-trigger {
+  opacity: 0.6 !important; }
+  .expandable .b-expand-trigger .e-expandable-title {
+    padding-left: 24px; }
+  .expandable .b-expand-trigger i {
+    float: right;
+    vertical-align: -7px; }
 
 .breadcrumbs {
   font-size: 1rem;

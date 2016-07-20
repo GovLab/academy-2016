@@ -3,6 +3,10 @@
     display: none;
   }
   .b-expand-trigger {
+    opacity: 0.6 !important;
+    .e-expandable-title {
+      padding-left: 24px;
+    }
     i {
       float: right;
       vertical-align: -7px;
