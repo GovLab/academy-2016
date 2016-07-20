@@ -41,16 +41,16 @@
         &:nth-of-type(odd) { background-color: rgba($black, .05); }
 
         &.m-clinics {
-            .b-button { background-color: $orange; }
+            .b-button { background-color: $clinics-color; }
         }
         &.m-coaching { 
-            .b-button { background-color: $orange; }
+            .b-button { background-color: $coaching-color; }
         }
         &.m-masters  {
-            .b-button { background-color: $orange; }
+            .b-button { background-color: $masters-color; }
         }
         &.m-workshop { 
-            .b-button { background-color: $orange; }
+            .b-button { background-color: $workshop-color; }
         }
     }
 }
