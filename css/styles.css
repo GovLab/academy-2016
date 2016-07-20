@@ -7118,17 +7118,14 @@ code.m-negative {
 .b-button.m-orange, .b-form input.m-orange[type="submit"] {
   background-color: #ee5b43; }
 
-.b-button.m-light-orange, .b-form input.m-light-orange[type="submit"] {
-  background-color: #f86b53; }
-
 .b-button.m-clinics, .b-form input.m-clinics[type="submit"] {
-  background-color: #f9b26f; }
+  background-color: #efce7c; }
 
 .b-button.m-coaching, .b-form input.m-coaching[type="submit"] {
   background-color: #22a69b; }
 
 .b-button.m-masters, .b-form input.m-masters[type="submit"] {
-  background-color: #efce7c; }
+  background-color: #f9b26f; }
 
 .b-button.m-workshop, .b-form input.m-workshop[type="submit"] {
   background-color: #366473; }
@@ -7203,13 +7200,13 @@ code.m-negative {
   padding: 50px 0;
   color: white; }
   .b-main-categories .e-item.m-clinics {
-    background-color: #f9b26f; }
+    background-color: #efce7c; }
   .b-main-categories .e-item.m-coaching {
     background-color: #22a69b; }
   .b-main-categories .e-item.m-masters {
     background-color: #366473; }
   .b-main-categories .e-item.m-workshop {
-    background-color: #efce7c; }
+    background-color: #f9b26f; }
 
 .b-upcoming-courses .e-item {
   padding: 50px;
@@ -7219,13 +7216,13 @@ code.m-negative {
   .b-upcoming-courses .e-item:nth-of-type(odd) {
     background-color: rgba(51, 51, 51, 0.05); }
   .b-upcoming-courses .e-item.m-clinics .b-button, .b-upcoming-courses .e-item.m-clinics .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-clinics input[type="submit"] {
-    background-color: #ee5b43; }
+    background-color: #efce7c; }
   .b-upcoming-courses .e-item.m-coaching .b-button, .b-upcoming-courses .e-item.m-coaching .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-coaching input[type="submit"] {
-    background-color: #ee5b43; }
+    background-color: #22a69b; }
   .b-upcoming-courses .e-item.m-masters .b-button, .b-upcoming-courses .e-item.m-masters .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-masters input[type="submit"] {
-    background-color: #ee5b43; }
+    background-color: #f9b26f; }
   .b-upcoming-courses .e-item.m-workshop .b-button, .b-upcoming-courses .e-item.m-workshop .b-form input[type="submit"], .b-form .b-upcoming-courses .e-item.m-workshop input[type="submit"] {
-    background-color: #ee5b43; }
+    background-color: #366473; }
 
 .b-course-list {
   margin: 0; }
@@ -7653,7 +7650,7 @@ code.m-negative {
 .b-course-list.m-clinics .b-course-header,
 .b-course-list.m-clinics .breadcrumbs,
 .b-course-list.m-clinics .b-faculty-header {
-  background-color: #f9b26f; }
+  background-color: #efce7c; }
 
 .b-course-detail.m-coaching .b-top-section, .b-course-detail.m-coaching .b-highlights, .b-course-detail.m-coaching .b-course-header, .b-course-detail.m-coaching .breadcrumbs, .b-course-detail.m-coaching .b-faculty-header,
 .b-course-list.m-coaching .b-top-section,
@@ -7669,7 +7666,7 @@ code.m-negative {
 .b-course-list.m-masters .b-course-header,
 .b-course-list.m-masters .breadcrumbs,
 .b-course-list.m-masters .b-faculty-header {
-  background-color: #efce7c; }
+  background-color: #f9b26f; }
 
 .b-course-detail.m-workshop .b-top-section, .b-course-detail.m-workshop .b-highlights, .b-course-detail.m-workshop .b-course-header, .b-course-detail.m-workshop .breadcrumbs, .b-course-detail.m-workshop .b-faculty-header,
 .b-course-list.m-workshop .b-top-section,
@@ -7710,10 +7707,10 @@ code.m-negative {
   background-color: #2e5562; }
 
 .b-course-list.m-masters .b-divider {
-  background-color: #ecc665; }
+  background-color: #f8a557; }
 
 .b-course-list.m-clinics .b-divider {
-  background-color: #f8a557; }
+  background-color: #ecc665; }
 
 .b-faculty-header {
   text-align: center; }
@@ -7758,9 +7755,9 @@ code.m-negative {
   .b-page-section.m-sequence.m-coaching .e-sequence-image {
     background-color: #22a69b; }
   .b-page-section.m-sequence.m-masters .e-sequence-image {
-    background-color: #efce7c; }
-  .b-page-section.m-sequence.m-clinics .e-sequence-image {
     background-color: #f9b26f; }
+  .b-page-section.m-sequence.m-clinics .e-sequence-image {
+    background-color: #efce7c; }
   .b-page-section.m-sequence.m-workshop .e-sequence-image {
     background-color: #366473; }
 
