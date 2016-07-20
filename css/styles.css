@@ -7789,3 +7789,6 @@ code.m-negative {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.15); }
   .b-main-menu::-webkit-scrollbar-thumb:window-inactive {
     background: rgba(0, 0, 0, 0.15); }
+
+.b-programs-page .b-button, .b-programs-page .b-form input[type="submit"], .b-form .b-programs-page input[type="submit"], .b-about-page .b-button, .b-about-page .b-form input[type="submit"], .b-form .b-about-page input[type="submit"] {
+  background-color: #F47156; }
