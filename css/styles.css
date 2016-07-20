@@ -7798,3 +7798,6 @@ code.m-negative {
 
 .b-course-detail .m-coaching {
   background-color: #22a69b; }
+
+.b-library-page .b-page-section:nth-child(2n) {
+  background-color: rgba(0, 0, 0, 0.05); }
