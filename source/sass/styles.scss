@@ -69,3 +69,9 @@ $clinics-color: $light-yellow;
 .b-course-detail {
   .m-coaching {background-color: $coaching-color;}
 }
+
+.b-library-page {
+  .b-page-section:nth-child(2n) {
+      background-color: rgba(0,0,0,0.05);
+  }
+}

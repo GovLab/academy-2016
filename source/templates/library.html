@@ -2,7 +2,7 @@
 
 {% block main %}
 <div class="b-library-page">
-  <div class="b-top-section m-orange">
+  <div class="b-top-section m-primary">
     <div class="row">
       <div class="large-12 column">
         <h1>Library</h1>
@@ -17,6 +17,27 @@
       </div>
     </div>
   </div>
+
+  {% for pub in library %}
+
+  <section class="b-page-section">
+    <div class="row">
+      <div class="columns large-7 large-offset-1">
+        <a href="{{pub.url}}"><h5>{{ pub.title}}</h5></a>
+        <p>{{pub.description}}</p>
+      </div>
+      <div class="large-3 large-offset-1 end columns">
+      {% for tag in pub.tags %}
+        <span>{{tag}}</span>
+      {% endfor%}
+        
+      </div>
+    </div>
+  </section>
+
+  {% endfor %}
+
+
 
 </div>
 
