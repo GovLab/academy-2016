@@ -7795,3 +7795,6 @@ code.m-negative {
 
 .b-programs-page .b-button, .b-programs-page .b-form input[type="submit"], .b-form .b-programs-page input[type="submit"], .b-about-page .b-button, .b-about-page .b-form input[type="submit"], .b-form .b-about-page input[type="submit"] {
   background-color: #F47156; }
+
+.b-course-detail .m-coaching {
+  background-color: #22a69b; }
