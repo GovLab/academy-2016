@@ -7118,6 +7118,9 @@ code.m-negative {
 .b-button.m-orange, .b-form input.m-orange[type="submit"] {
   background-color: #ee5b43; }
 
+.b-button.m-light-orange, .b-form input.m-light-orange[type="submit"] {
+  background-color: #F47156 !important; }
+
 .b-button.m-clinics, .b-form input.m-clinics[type="submit"] {
   background-color: #efce7c; }
 
@@ -7129,6 +7132,12 @@ code.m-negative {
 
 .b-button.m-workshop, .b-form input.m-workshop[type="submit"] {
   background-color: #366473; }
+
+.m-primary {
+  background-color: #ee5b43; }
+
+.m-secondary {
+  background-color: #F47156; }
 
 @media screen and (min-width: 64.0625em) {
   input::-webkit-input-placeholder {
