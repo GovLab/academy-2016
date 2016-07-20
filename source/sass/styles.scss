@@ -60,3 +60,8 @@ $clinics-color: $light-yellow;
     background: $gray-15; 
   }
 }
+
+// PAGE STYLES
+.b-programs-page, .b-about-page {
+  .b-button {background-color: $secondary}
+}
