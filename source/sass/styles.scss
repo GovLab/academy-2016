@@ -1,23 +1,28 @@
 @import '../../node_modules/govlab-styleguide/sass/styles.scss'; // govlab-styleguide sass
 
 $orange: #ee5b43; //main academy orange
-$light-orange: #f86b53;
+$light-orange: #F47156;
 $yellow: #f9b26f;
 $light-yellow: #efce7c;
 $green: #22a69b;
 $blue: #366473;
 
+$primary: $orange;
+$secondary: $light-orange;
 $coaching-color: $green;
 $workshop-color: $blue;
 $masters-color: $yellow;
 $clinics-color: $light-yellow;
 
 .b-button.m-orange {background-color: $orange}
-// .b-button.m-light-orange {background-color: $light-orange}
+.b-button.m-light-orange {background-color: $light-orange !important}
 .b-button.m-clinics { background-color: $clinics-color; }
 .b-button.m-coaching { background-color: $coaching-color; }
 .b-button.m-masters { background-color: $masters-color; }
 .b-button.m-workshop { background-color: $workshop-color; }
+
+.m-primary {background-color: $primary;}
+.m-secondary {background-color: $secondary;}
 
 @import 'subscribe';
 @import 'homepage';
