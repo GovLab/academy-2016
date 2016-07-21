@@ -33,12 +33,20 @@
 .e-course-passion {
   h2 { font-size: 1.3rem; }
 }
-
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+  }
 .b-faculty-card {
-  
+  max-width: 25%;
+  flex: 1;
+  flex-grow: 1;
   &:nth-of-type(odd) {background-color: rgba($black, .05);}
   &.m-govlab .e-card-name { background-color: $purple; }  
-
+  a {
+    &:hover {text-decoration: none;}
+  }
   .e-card-picture {
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,6 +56,8 @@
 
   .e-card-description {
     padding: 20px;
+    flex: 1;
+    flex-grow: 1;
   }
 
   .e-card-name {
@@ -60,6 +70,8 @@
     letter-spacing: .5px;
     background-color: $black;
     opacity: .9;
+    flex: 1;
+    flex-grow: 1;
   }
 
   .e-more-info { width: 100%; }
