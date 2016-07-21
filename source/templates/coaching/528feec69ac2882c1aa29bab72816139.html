@@ -94,7 +94,7 @@
           <div class="large-3 column b-faculty-card {% if person.is_govlab %}m-govlab {% endif%} end">
           <a href="{{person.id}}-{{person.name.slug}}.html" target="_blank">
             <div class="e-card-picture" style="background-image: url(./img/faculty/{{ person.name.slug }}.jpg);"></div>
-            <h1 class="e-card-name ">{{ person.name.first}} {{person.name.last }}</h1>
+            <h1 class="e-card-name">{{ person.name.first}} {{person.name.last }}</h1>
             <p class="e-card-description">{{ person.job }}</p>
           </div>
         {% else %}
