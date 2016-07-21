@@ -7313,34 +7313,44 @@ code.m-negative {
 .e-course-passion h2 {
   font-size: 1.3rem; }
 
-.b-faculty-card:nth-of-type(odd) {
-  background-color: rgba(51, 51, 51, 0.05); }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap; }
 
-.b-faculty-card.m-govlab .e-card-name {
-  background-color: #523080; }
-
-.b-faculty-card .e-card-picture {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 200px; }
-
-.b-faculty-card .e-card-description {
-  padding: 20px; }
-
-.b-faculty-card .e-card-name {
-  margin-top: -35px;
-  height: 35px;
-  font-size: 1.2rem;
-  padding: 5px;
-  color: white;
-  font-weight: 300;
-  letter-spacing: .5px;
-  background-color: #333;
-  opacity: .9; }
-
-.b-faculty-card .e-more-info {
-  width: 100%; }
+.b-faculty-card {
+  max-width: 25%;
+  flex: 1;
+  flex-grow: 1; }
+  .b-faculty-card:nth-of-type(odd) {
+    background-color: rgba(51, 51, 51, 0.05); }
+  .b-faculty-card.m-govlab .e-card-name {
+    background-color: #523080; }
+  .b-faculty-card a:hover {
+    text-decoration: none; }
+  .b-faculty-card .e-card-picture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 200px; }
+  .b-faculty-card .e-card-description {
+    padding: 20px;
+    flex: 1;
+    flex-grow: 1; }
+  .b-faculty-card .e-card-name {
+    margin-top: -35px;
+    height: 35px;
+    font-size: 1.2rem;
+    padding: 5px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: .5px;
+    background-color: #333;
+    opacity: .9;
+    flex: 1;
+    flex-grow: 1; }
+  .b-faculty-card .e-more-info {
+    width: 100%; }
 
 .b-project-gallery-page .e-pg-card {
   height: 300px;
